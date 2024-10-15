@@ -3,7 +3,8 @@ import {
   SkillFloater
 } from '@/features/skills/'
 import {
-  PageBlocks
+  PageBlocks,
+  ParticleBackground
 } from '@/global';
 import {
   TerminalController
@@ -11,14 +12,17 @@ import {
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen ">
-      <TerminalController />
-      <PageBlocks >
-        <SkillFloater source="/skills_react.png" />
-        <SkillFloater source="/skills_react.png" />
-        <SkillFloater source="/skills_react.png" />
-        <SkillFloater source="/skills_react.png" />
+    <>
+      <ParticleBackground />
+      <PageBlocks center={true} >
+        <div className="p-2 flex flex-col ">
+          <h1>Karl Løvendahl</h1>
+          <p>Hvad skal der stå her??</p>
+        </div>
+        <div className="flex items-start w-3/5">
+          <TerminalController />
+        </div>
       </PageBlocks>
-    </div>
+    </>
   );
 }

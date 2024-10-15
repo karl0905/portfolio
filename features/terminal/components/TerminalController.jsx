@@ -12,7 +12,7 @@ export function TerminalController() {
     <TerminalOutput key="suggestion2"><strong>hello </strong> --to greet the terminal</TerminalOutput>,
     <TerminalOutput key="suggestion3"><strong>echo &#123;input&#125; </strong> --echo something out in the terminal</TerminalOutput>
   ]);
-  
+
   const [commandHistory, setCommandHistory] = useState([]);
   const [currentInput, setCurrentInput] = useState('');
 
@@ -33,14 +33,23 @@ export function TerminalController() {
       return args.join(' ');
     },
     help: () => 'Available commands: hello, date, clear, echo',
-    default: (input) => <span style={{ color: 'red' }}>Unrecognized command: {input}</span>
+    default: (input) => {
+      return (
+        <span style={{ color: 'red' }}>
+          zsh: command not found: {input}
+        </span>
+      );
+    }
   };
 
   // Handle terminal input
   const handleInput = (input) => {
     const [commandName, ...args] = input.split(' '); // Split input into command and arguments
-    const command = commands[commandName] || commands.default;
-    const output = command(args); // Pass arguments to the command function
+    const lowerCaseCommandName = commandName.toLowerCase(); // Convert command name to lowercase
+    const command = commands[lowerCaseCommandName] || commands.default;
+
+    // Pass original input for echo and error messages
+    const output = command(command === commands.default ? input : args); // Pass arguments or full input based on command
 
     // Update terminal output and command history
     addOutput(input, output);
@@ -50,7 +59,7 @@ export function TerminalController() {
   // Function to add output to terminal
   const addOutput = (input, output) => {
     setCommandHistory(prev => [...prev, input]); // Store command history
-    
+
     // Sanitize output before rendering it
     const sanitizedOutput = typeof output === 'string' ? DOMPurify.sanitize(output) : output;
 
