@@ -4,7 +4,18 @@ import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 import DOMPurify from 'dompurify'; // Import DOMPurify
 
 export function TerminalController() {
+  const asciiArt =
+    <pre className='whitespace-pre leading-5'>
+      {`
+    __ __              __   __                                   __        __     __
+   / //_/____ _ _____ / /  / /   _____  _   __ ___   ____   ____/ /____ _ / /_   / /
+  / ,<  / __ \`// ___// /  / /   / _// \\| | / // _ \\ / __ \\ / __  // __ \`// __ \\ / / 
+ / /| |/ /_/ // /   / /  / /___/ //// /| |/ //  __// / / // /_/ // /_/ // / / // /  
+/_/ |_|\\__,_//_/   /_/  /_____/\\_//__/ |___/ \\___//_/ /_/ \\__,_/ \\__,_//_/ /_//_/   
+      `}
+    </pre>
   const [terminalLineData, setTerminalLineData] = useState([
+    <TerminalOutput key="asciiArt" >{asciiArt}</TerminalOutput>,
     <TerminalOutput key="welcome1">Welcome to the Karl terminal</TerminalOutput>,
     <TerminalOutput key="welcome2">Type a command to get started</TerminalOutput>,
     <TerminalOutput key="welcome3">Here are a few suggestions:</TerminalOutput>,
@@ -65,7 +76,7 @@ export function TerminalController() {
 
     setTerminalLineData(prev => [
       ...prev,
-      <TerminalOutput key={prev.length + 1}>{`$ ${input}`}</TerminalOutput>, // Display the command
+      <TerminalOutput key={prev.length + 1}>{`$ ${input} `}</TerminalOutput>, // Display the command
       sanitizedOutput && <TerminalOutput key={prev.length + 2}>{sanitizedOutput}</TerminalOutput> // Display sanitized output only if it exists
     ]);
   };
