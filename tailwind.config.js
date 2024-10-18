@@ -13,6 +13,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'mobile': { 'max': '700px' },   // => @media (max-width: 639px) { ... }
+        'desktop': { 'min': '1280px' }, // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [],

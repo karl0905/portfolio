@@ -47,3 +47,45 @@ p {
   font-size: 1rem;
   color: var(--text)
 }
+
+.react-terminal-line {
+  white-space: pre-wrap !important;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.react-terminal-input:before {
+  margin-right: 0.5rem !important;
+}
+
+/* General scrollbar styles for WebKit browsers (Chrome, Safari, Edge) */
+.react-terminal::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+}
+
+.react-terminal::-webkit-scrollbar-track {
+  background: transparent;
+  /* Remove background */
+}
+
+.react-terminal::-webkit-scrollbar-thumb {
+  background-color: rgba(200, 200, 200, 0.7);
+  /* Light gray color */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+/* Change thumb color on hover */
+.react-terminal::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(150, 150, 150, 0.9);
+  /* Darker gray on hover */
+}
+
+/* Firefox scrollbar styles */
+.react-terminal {
+  scrollbar-width: thin;
+  /* Make scrollbar thin */
+  scrollbar-color: rgba(200, 200, 200, 0.7) transparent;
+  /* Thumb color and track color */
+}

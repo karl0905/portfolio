@@ -19,7 +19,7 @@ export default function Home() {
           <h1>Karl Løvendahl</h1>
           <p>Hvad skal der stå her??</p>
         </div>
-        <div className="flex items-start w-3/5">
+        <div className="flex items-start w-3/5 mobile:w-4/5">
           <TerminalController />
         </div>
       </PageBlocks>
