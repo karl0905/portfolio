@@ -1,16 +1,16 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const HackNerdFontMono = localFont({
+  src: "./fonts/HackNerdFontMono-Regular.woff",
+  variable: "--font-hack",
   weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+})
+const HackNerdFontMonoBold = localFont({
+  src: "./fonts/HackNerdFont-Bold.woff",
+  variable: "--font-hack-bold",
   weight: "100 900",
-});
+})
 
 export const metadata = {
   title: "Karl Løvendahl",
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
+        className={`${HackNerdFontMono.variable} ${HackNerdFontMonoBold.variable} font-hack antialiased h-screen`}
       >
         {children}
       </body>
