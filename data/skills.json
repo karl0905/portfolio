@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "name": " HTML",
+      "content": [
+        "HTML5",
+        "Semantic HTML",
+        "Accessibility"
+      ]
+    },
+    {
+      "name": " CSS",
+      "content": [
+        "CSS3",
+        "Flexbox",
+        "Grid",
+        "Responsive Design",
+        "SASS",
+        "Bootstrap"
+      ]
+    },
+    {
+      "name": " JavaScript",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ]
+    }
+  ]
+}

@@ -11,12 +11,7 @@
   /* Emerald Green */
   --text: #AFD7FF;
   /* Light Silver */
-  --secondary: #00FF00;
-  /* Bright Green */
-  --tertiary: #6BB9F0;
-  /* Soft Sky Blue */
-  --accent: #FF6F61;
-  /* Coral */
+  --green: #afd75f
 }
 
 /* @media (prefers-color-scheme: dark) { */
