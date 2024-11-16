@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export function StatusTab({ title, icon }) {
-  const arrowSize = 8; // Size of the arrow
+  const arrowSize = 8; 
   return (
     <div className={`relative flex items-center h-4 text-white bg-[#afd75f]`}>
       <span className="text-xs font-bold"></span>

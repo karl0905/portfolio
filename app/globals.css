@@ -52,7 +52,6 @@ p {
   user-select: none; /* Prevent text selection */
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
-  draggable: false;
 }
 
 .react-terminal-line {

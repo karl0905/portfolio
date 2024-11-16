@@ -3,13 +3,12 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export function DateTab({ icon }) {
-  const arrowSize = 8; // Size of the arrow
+  const arrowSize = 8; 
   const [currentDateTime, setCurrentDateTime] = useState('16 Nov 00:00');
 
   useEffect(() => {
     const updateDateTime = () => {
       const now = new Date();
-      // Format the date as "16 Nov 11:35"
       const options = {
         day: '2-digit',
         month: 'short',
@@ -20,13 +19,11 @@ export function DateTab({ icon }) {
       setCurrentDateTime(formattedDate);
     };
 
-    // Update immediately on mount
     updateDateTime();
 
-    // Set an interval to update every second
     const intervalId = setInterval(updateDateTime, 1000);
 
-    return () => clearInterval(intervalId); // Cleanup on unmount
+    return () => clearInterval(intervalId); 
   }, []);
 
   return (

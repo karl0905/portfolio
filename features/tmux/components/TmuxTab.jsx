@@ -7,7 +7,7 @@ export function TmuxTab({
   isActive = false,
   action = () => { }
 }) {
-  const arrowSize = 8; // Size of the arrow
+  const arrowSize = 8;
 
   return (
     <div
