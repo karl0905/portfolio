@@ -48,6 +48,13 @@ p {
   color: var(--text)
 }
 
+.no-select {
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  draggable: false;
+}
+
 .react-terminal-line {
   white-space: pre-wrap !important;
   font-size: 14px;
