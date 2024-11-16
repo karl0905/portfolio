@@ -1,17 +1,20 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function TmuxTab({
   icon,
   title = "tab",
   index,
   isActive = false,
+  destination = "/",
   action = () => { }
 }) {
   const arrowSize = 8;
 
   return (
-    <div
+    <Link
       onClick={action}
+      href={destination}
       className={`relative flex items-center h-4 text-white 
       ${isActive ? "bg-[#af87d7]" : "bg-[#545a78]"}`}>
       {/* Left Triangle Cutout with Number */}
@@ -61,7 +64,7 @@ export function TmuxTab({
           borderLeftWidth: `${arrowSize}px`,
         }}
       ></div>
-    </div>
+    </Link>
   );
 }
 

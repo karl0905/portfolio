@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: linear-gradient(135deg, #1E2226 30%, #252a33 100%);
+  --background: #1c1c1c;
   /* Dark Slate */
   --foreground: #171717;
   /* Very Dark Gray */
   --header: #2ECC71;
   /* Emerald Green */
-  --text: #FFFFFF;
+  --text: #AFD7FF;
   /* Light Silver */
   --secondary: #00FF00;
   /* Bright Green */
@@ -40,7 +40,7 @@ body {
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--header);
+  color: var(--text);
 }
 
 p {

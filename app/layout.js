@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import {
+  TmuxLine
+} from "@/features/tmux";
 
 const HackNerdFontMono = localFont({
   src: "./fonts/HackNerdFontMono-Regular.woff",
@@ -26,6 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${HackNerdFontMono.variable} ${HackNerdFontMonoBold.variable} font-hack antialiased h-screen`}
       >
+        <TmuxLine />
         {children}
       </body>
     </html>

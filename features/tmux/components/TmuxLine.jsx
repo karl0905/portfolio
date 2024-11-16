@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 import {
   TmuxTab,
@@ -11,14 +12,12 @@ const tabs = [
   {
     icon: "/terminal_white.svg",
     title: "nvim",
+    destination: "/"
   },
   {
     icon: "/terminal_white.svg",
     title: "zsh",
-  },
-  {
-    icon: "/terminal_white.svg",
-    title: "title",
+    destination: "/zsh"
   },
 ]
 
@@ -33,20 +32,21 @@ const dateTab = {
 }
 
 export function TmuxLine() {
-  const [currentSite, setCurrentSite] = useState('zsh');
+  const route = usePathname();
+  const [currentSite, setCurrentSite] = useState(route);
   return (
-    <div className='h-fit flex gap-2 bg-[#2a2d40] no-select'>
+    <div className='h-fit flex gap-2 bg-[#303030] no-select'>
       <StatusTab title={statusTab.title} icon={statusTab.icon} />
       {
         tabs.map((item, index) => (
           <TmuxTab
-            className="mouse-pointer"
             key={index}
             index={index}
             icon={item.icon}
             title={item.title}
-            isActive={currentSite === item.title}
-            action={() => setCurrentSite(item.title)}
+            isActive={currentSite === item.destination}
+            action={() => setCurrentSite(item.destination)}
+            destination={item.destination}
           />
         ))
       }

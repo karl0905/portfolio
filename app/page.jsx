@@ -1,20 +1,12 @@
 import {
-  ParticleBackground
-} from '@/global';
-import {
-  TerminalController
-} from '@/features/terminal/';
-import {
-  TmuxLine
-} from '@/features/tmux/'
+  Tree
+} from '@/features/nerdTree';
 
 export default function Home() {
   return (
-    <>
-      <TmuxLine />
-      <div className="p-2 flex flex-col ">
-      </div>
+    <div className='flex'>
+      <Tree />
       <h1 className=''>Hi, I&apos;m Karl Løvendahl =&gt; </h1>
-    </>
+    </div>
   );
 }
