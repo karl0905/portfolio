@@ -8,3 +8,6 @@ export * from './hooks/useMediaQuery';
 
 // Stores 
 export * from './stores/useMenuStore';
+
+// Utils 
+export * from './utils/dataFetchers';

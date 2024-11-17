@@ -1,5 +1,9 @@
 import { Fileline, Folder } from "@/features/nerdTree";
-import skillsData from '@/data/skills.json'; // Importing JSON data directly
+import {
+  getExperience,
+  getProjects,
+  getSkills,
+} from "@/global";
 
 const treeContent = [
   {
@@ -19,9 +23,22 @@ const treeContent = [
   },
 ];
 
-export function Tree() {
-  const skills = skillsData.data; // Accessing the skills data
+const folders = [
+  {
+    title: "experience",
+    content: getExperience(),
+  },
+  {
+    title: "projects",
+    content: getProjects(),
+  },
+  {
+    title: "skills",
+    content: getSkills(),
+  },
+]
 
+export async function Tree() {
   return (
     <div className="flex flex-col px-4 h-screen w-80 bg-transparent border-r-2 border-gray-400">
       {treeContent.map((item, index) => (
@@ -33,33 +50,14 @@ export function Tree() {
         />
       ))}
 
-      <Folder
-        title="skills"
-      >
-        {skills.map((skill, index) => (
-          <p key={index}> {/* Added key for each skill */}
-            {skill.name}
-          </p>
-        ))}
-      </Folder>
-      <Folder
-        title="education"
-      >
-        {skills.map((skill, index) => (
-          <p key={index}> {/* Added key for each skill */}
-            {skill.name}
-          </p>
-        ))}
-      </Folder>
-      <Folder
-        title="projects"
-      >
-        {skills.map((skill, index) => (
-          <p key={index}> {/* Added key for each skill */}
-            {skill.name}
-          </p>
-        ))}
-      </Folder>
+      {folders.map((folder, index) => (
+        <Folder
+          key={index}
+          title={folder.title}
+          route={folder.title}
+          content={folder.content}
+        />
+      ))}
     </div>
   );
 }
