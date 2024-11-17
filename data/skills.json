@@ -6,7 +6,8 @@
         "HTML5",
         "Semantic HTML",
         "Accessibility"
-      ]
+      ],
+      "snippet": "html"
     },
     {
       "name": " CSS",
@@ -17,15 +18,89 @@
         "Responsive Design",
         "SASS",
         "Bootstrap"
-      ]
+      ],
+      "snippet": "css"
     },
     {
-      "name": " JavaScript",
+      "name": " JavaScript",
       "content": [
         "ES6",
         "DOM Manipulation",
         "AJAX"
-      ]
+      ],
+      "snippet": "js"
+    },
+    {
+      "name": " React",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "jsx"
+    },
+    {
+      "name": " Next.js",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "next"
+    },
+    {
+      "name": "󱏿 Tailwind",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "tw"
+    },
+    {
+      "name": " PHP",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "php"
+    },
+    {
+      "name": " MySQL",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "mysql"
+    },
+    {
+      "name": " Git",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "git"
+    },
+    {
+      "name": " Zsh",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "zsh"
+    },
+    {
+      "name": " Neovim",
+      "content": [
+        "ES6",
+        "DOM Manipulation",
+        "AJAX"
+      ],
+      "snippet": "nvim"
     }
   ]
 }

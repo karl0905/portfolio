@@ -40,7 +40,7 @@ const folders = [
 
 export async function Tree() {
   return (
-    <div className="flex flex-col px-4 h-screen w-80 bg-transparent border-r-2 border-gray-400">
+    <div className="flex flex-col px-4 h-screen w-1/4 bg-transparent border-r-2 border-gray-400">
       {treeContent.map((item, index) => (
         <Fileline
           key={index}

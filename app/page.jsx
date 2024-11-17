@@ -1,12 +1,15 @@
+import { Tree } from '@/features/nerdTree';
 import {
-  Tree
-} from '@/features/nerdTree';
+  MainContent
+} from '@/global';
 
 export default function Home() {
+
   return (
     <div className='flex'>
       <Tree />
-      <h1 className=''>Hi, I&apos;m Karl Løvendahl =&gt; </h1>
+      <MainContent />
     </div>
   );
 }
+
