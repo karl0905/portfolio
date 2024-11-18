@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export function DateTab({ icon }) {
-  const arrowSize = 8; 
+  const arrowSize = 10; 
   const [currentDateTime, setCurrentDateTime] = useState('16 Nov 00:00');
 
   useEffect(() => {
@@ -27,16 +27,16 @@ export function DateTab({ icon }) {
   }, []);
 
   return (
-    <div className={`ml-auto relative flex items-center h-4 text-white bg-[#545a78]`}>
+    <div className={`ml-auto relative flex items-center h-5 text-white bg-[#545a78]`}>
       {/* Left Triangle Cutout with Icon */}
       <div className="relative flex items-center h-full">
         {/* Icon Box with Left-pointing Triangle Arrow */}
-        <div className="relative flex items-center justify-center bg-[#747a9f] w-4 h-full">
-          <Image className="mr-2.5 z-50"
+        <div className="relative flex items-center justify-center bg-[#747a9f] w-6 h-full">
+          <Image className="mr-3 z-50"
             src={icon}
             alt="tmux tab icon"
-            height={10}
-            width={10}
+            height={12}
+            width={12}
             draggable={false}
           />
         </div>
@@ -54,7 +54,7 @@ export function DateTab({ icon }) {
 
       {/* Main Tab Content */}
       <div className="flex items-center px-1">
-        <span className="text-xs">{currentDateTime}</span>
+        <span className="text-sm">{currentDateTime}</span>
       </div>
 
       {/* Left Arrow */}

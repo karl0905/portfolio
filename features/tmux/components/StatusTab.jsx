@@ -1,21 +1,21 @@
 import Image from "next/image";
 
 export function StatusTab({ title, icon }) {
-  const arrowSize = 8; 
+  const arrowSize = 10;
   return (
-    <div className={`relative flex items-center h-4 text-white bg-[#afd75f]`}>
-      <span className="text-xs font-bold"></span>
+    <div className={`relative flex items-center h-5 text-white bg-[#afd75f]`}>
+      <span className="text-sm font-bold"></span>
 
       {/* Main Tab Content */}
       <div className="flex items-center h-full px-1.5" >
         <Image
           src={icon}
           alt="tmux tab icon"
-          height={12}
-          width={12}
+          height={14}
+          width={14}
           draggable={false}
         />
-        <span className="ml-2 text-xs text-black">{title}</span>
+        <span className="ml-2 text-sm text-black">{title}</span>
       </div>
 
       {/* Right Arrow */}
