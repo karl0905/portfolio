@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customGreen: "var(--green)",
+        customOrange: "var(--orange)",
+        customPurple: "var(--purple)",
       },
       fontFamily: {
         'hack': ['var(--font-hack)', 'monospace'],
