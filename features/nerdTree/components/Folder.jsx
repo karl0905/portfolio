@@ -51,7 +51,7 @@ export function Folder({
 
   return (
     <div>
-      <p className="text-sm text-[#87afff] cursor-pointer" onClick={toggleDropdown}>
+      <p className="text-md text-[#87afff] cursor-pointer" onClick={toggleDropdown}>
         {isOpen ? '▼' : '▶'} {title}
       </p>
       {isOpen && (
@@ -63,7 +63,7 @@ export function Folder({
                 ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
               onClick={() => handleMenuClick(item)}
             >
-              <p className='text-sm'>{item.name}</p>
+              <p className='text-md'>{item.name}</p>
             </div>
           ))}
         </div>

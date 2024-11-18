@@ -27,10 +27,15 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.png" />
       </head>
       <body
-        className={`${HackNerdFontMono.variable} ${HackNerdFontMonoBold.variable} font-hack antialiased h-screen`}
-      >
+        className={`
+          ${HackNerdFontMono.variable} 
+          ${HackNerdFontMonoBold.variable} 
+          font-hack antialiased h-screen flex flex-col
+          `} >
         <TmuxLine />
-        {children}
+        <div className="flex flex-grow overflow-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );

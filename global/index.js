@@ -15,3 +15,5 @@ export * from './stores/useContentStore';
 
 // Utils 
 export * from './utils/dataFetchers';
+export * from './utils/getRandomTextColorClass';
+export * from './utils/colorizeString';

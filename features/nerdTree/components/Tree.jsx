@@ -12,6 +12,11 @@ const treeContent = [
     hexcode: "afd75f"
   },
   {
+    content: <br />,
+    type: "misc",
+    hexcode: "9574d7"
+  },
+  {
     content: ".. (up a dir)",
     type: "misc",
     hexcode: "af87ff"
@@ -40,7 +45,9 @@ const folders = [
 
 export async function Tree() {
   return (
-    <div className="flex flex-col px-4 h-screen w-1/4 bg-transparent border-r-2 border-gray-400">
+    <div
+      className="overflow-y-auto overflow-x-none flex flex-col px-4 
+       min-w-80 bg-transparent border-r-2 border-gray-400">
       {treeContent.map((item, index) => (
         <Fileline
           key={index}
