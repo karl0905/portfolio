@@ -38,7 +38,7 @@ const folders = [
     content: getProjects(),
   },
   {
-    title: "skills",
+    title: "skills_and_tools",
     content: getSkills(),
   },
 ]
