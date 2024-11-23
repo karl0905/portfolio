@@ -3,102 +3,118 @@
     {
       "name": " HTML",
       "content": [
-        "{{HTML}} is the {{cornerstone}} of the web, providing the essential structure to {{organize}} content effectively. With several years of experience, I have utilized {{HTML}} to create a variety of projects, from {{static websites}} to {{dynamic web applications}}.",
-        "",
-        "If i were {{kennyS}}, HTML would be my {{trusty AWP}}."
+        "HTML is the {{cornerstone}} of the web, providing the essential structure to {{organize}} and categorize the content of a {{website}} effectively.",
+        "I have been using HTML for the past few years and I am very familiar with it. I have used it for all my {{frontend projects}}, including simple websites, {{responsive websites}}, {{web applications}} and {{internal software}}.",
+        "I have come to appreciate HTML's {{simplicity}} and {{power}}.",
+        "If I were {{kennyS}}, HTML would be my {{trusty AWP}}."
       ],
       "snippet": "html"
     },
     {
       "name": " CSS",
       "content": [
-        "CSS3",
-        "Flexbox",
-        "Grid",
-        "Responsive Design",
-        "SASS",
-        "Bootstrap"
+        "CSS is the {{styling maestro}} of the web, giving life and {{visual appeal}} to the structure provided by HTML.",
+        "I have been working with CSS for as many years as I have been using HTML, mastering its various aspects like {{Flexbox}} and {{Pseudo classes}}. I have implemented {{responsive design}} in numerous projects, ensuring seamless user experiences across devices.",
+        "Although I have been using CSS for a long time, I much prefer using {{Tailwind CSS}} for my projects. It's a {{utility-first}} CSS framework that allows me to build complex designs with minimal effort. CSS classes can be {{tedious}}.",
+        "If I were a {{computer}}, CSS would be my {{integrated graphics}}."
       ],
       "snippet": "css"
     },
     {
       "name": " JavaScript",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "JavaScript is the {{dynamic powerhouse}} of web development, bringing {{interactivity}} and {{life}} to static web pages.",
+        "I have been crafting JavaScript solutions for {{3 years}}, leveraging modern frameworks like {{React}} and {{Next.js}} to build complex, {{responsive web applications}}.",
+        "My expertise spans from vanilla JavaScript to advanced {{ES6+}} features, asynchronous programming with {{promises}} and {{async/await}}, and state management using {{zustand}}. <br> I have implemented sophisticated {{frontend logic}}, created seamless {{single-page applications}}, and developed robust {{client-side interactions}} that enhance user experience.",
+        "Although I enjoy writing in JavaScript, I know it can sometimes be a mess. There are so many {{quirks}} and {{gotchas}} that can trip you up. But that's what makes it fun, right?.. {{Right?!}}"
       ],
       "snippet": "js"
     },
     {
       "name": " React",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "React is a {{JavaScript}} framework that simplifies the process of building {{interactive user interfaces}}. <br> It is {{component-based}}, {{declarative}} and {{unidirectional}}.",
+        "React is {{declarative}} because it allows you to describe the desired outcome and React will take care of the rest. <br> React is {{component-based}} because it allows you to break down your user interface into {{small}} and {{reusable}} components, making your code more {{modular}} and {{maintainable}}. <br> React is {{unidirectional}} because data flows in a {{single}} direction, making it easier to understand and debug.",
+        "I have been working with React for {{2 years}}, utilizing its capabilities to build {{scalable}} and {{efficient}} front-end solutions. <br> From {{single-page applications}} to internal {{enterprise systems}}, React has been my preferred choice.",
+        "My expertise includes harnessing {{hooks}}, and crafting {{custom hooks}} for effective state management. I have also explored {{server-side rendering}} with Next.js. <br> I have developed {{reusable component libraries}}, managed complex {{application state}}, and designed {{responsive layouts}} that adapt seamlessly to various devices.",
+        "The main reason I enjoy React, is because of the {{well structured}} code it allows you to write. It gives a great {{understanding}} of how to code in a {{modular}} and {{scalable}} way. <br> This for me is both {{rewarding}} and {{satisfying}}.",
+        "If I were a {{keyboard}}, React would be my {{hotswappable switches}}."
       ],
       "snippet": "jsx"
     },
     {
       "name": " Next.js",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "Next.js is a {{React}} framework that streamlines the development of {{server-rendered applications}}. <br> It excels in {{static site generation}}, {{API routes}}, and {{automatic optimization}}.",
+        "I have been using Next.js for almost {{2 years}}, building everything from {{single-page applications}} to dynamic {{dashboards}}. Its ability to handle both static and dynamic content has made it my preferred choice.",
+        "My experience includes implementing {{API routes}} for backend functionality, utilizing {{server-side rendering}} for faster initial loads, and developing {{dynamic routes}} to enhance user navigation across various devices.",
+        "What I love about Next.js is how it simplifies the process of building fast applications. The built-in features allow me to focus on writing clean, efficient code while ensuring my projects are both {{modular}} and {{scalable}}. <br> This combination of power and simplicity is truly {{rewarding}}.",
+        "If I were a {{custom-built desktop}}, Next.js would be my {{cable management}}"
       ],
       "snippet": "next"
     },
     {
       "name": "󱏿 Tailwind",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "Tailwind CSS is a {{utility-first}} framework that accelerates the process of building {{custom designs}}. <br> It shines in {{responsive design}}, {{flexible styling}}, and {{rapid prototyping}}.",
+        "I have been using Tailwind CSS for {{2 years}}, styling everything from {{landing pages}} and complex {{web applications}} to {{software interfaces}}. <br> Its utility-first approach allows for quick adjustments and {{creative freedom}}.",
+        "My experience includes applying {{responsive utilities}} to ensure designs look great on all devices, utilizing {{custom themes}} for consistent branding, and creating reusable components to streamline development. <br> This plays very well into using {{component based}} frameworks like React and Next.js.",
+        "What I love about Tailwind CSS is how it encourages a clean and organized approach to styling. The utility classes let me focus on building without being bogged down by context switching. <br> This efficiency is both {{rewarding}} and {{satisfying}}.",
+        "If I were an old classic {{car}}, Tailwind CSS would be my {{turbocharger}}."
       ],
       "snippet": "tw"
     },
     {
       "name": " PHP",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "PHP is a {{server-side}} scripting language that powers the development of {{dynamic web applications}}. <br> It excels in {{database integration}}, {{form handling}}, and {{session management}}.",
+        "I have been using PHP {{for half a year}}, but already feel comfortable in its ecosystem. <br> I have built {{RESTful APIs}}, database-driven applications, and user authentication systems using PHP.",
+        "PHP has opened a door to the backend world for me, introducing me to {{database management system}}, {{server-side logic}}, and {{security practices}}. <br> {{Backend development}} to me is very interesting, and PHP has been a great introduction.",
+        "If I were a {{switch}}, PHP would be my {{ethernet port}}."
       ],
       "snippet": "php"
     },
     {
       "name": " MySQL",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "MySQL is an {{open-source}} relational database management system that efficiently handles {{structured data}}. <br> It excels in {{data integrity}}, {{scalability}}, and {{performance}}.",
+        "I have been using MySQL for almost {{1 year}}, working on everything from {{small applications}} to larger {{projects}}. <br> Its reliability has made it my go-to choice for database management.",
+        "My experience includes designing {{database schemas}}, writing efficient {{SQL queries}}, and implementing {{user authentication}}. <br> This has greatly enhanced my backend development skills as well as my understanding of general {{data management}}.",
+        "Relational databases are very intriguing to me because of the way you can decide to {{organize}} and {{structure}} your data combined with your backend",
+        "If I were a {{Counter-Strike player}}, MySQL would be my {{inventory}}."
       ],
       "snippet": "mysql"
     },
     {
       "name": " Git",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "Git is a {{distributed}} version control system that simplifies {{source code}} management. <br> It is know for its {{collaboration}}, {{branching}}, and {{tracking changes}}.",
+        "I have been using Git for {{2 years}}, working on everything from {{personal projects}} to team-based {{software development}}. <br> Its powerful features are essential to my workflow.",
+        "My experience includes managing {{branches}} for new features and issues, using {{pull requests}} for code reviews, and keeping a clear project history with commits.",
+        "Git allows me to work on multiple features simultaneously, collaborate with team members effectively, and maintain a clean project history. <br> This has greatly improved my {{development workflow}} and {{code quality}}, and has ensured no more {{lost code}}... (whoops)",
+        "If I were my {{old miata}}, Git would be my {{service log}}."
       ],
       "snippet": "git"
     },
     {
       "name": " Zsh",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "Zsh is a powerful {{Unix shell}} that enhances the command line experience with features like {{programmable completion}} and {{customizable prompts}}.",
+        "I have been using Zsh religiously for almost {{1 year}}, and I’m increasingly integrating it with {{Homebrew}} to manage my coding environment. <br> This combination has made handling everything from installing {{packages}} to managing {{development setups}} much more efficient.",
+        "I find the command line interface fascinating because it offers a direct way to interact with my system, allowing for automation and precise control over tasks. <br> This level of interaction makes me feel more connected to the underlying processes.",
+        "My experience includes utilizing plugins like {{Oh My Zsh}} for enhanced functionality, customizing my terminal with themes, and taking advantage of features like {{autosuggestions}} and {{command history search}}.",
+        "Also, using the terminal makes me feel like a {{wizard}} casting spells on my computer, impressing non-terminal users.",
+        "If I were a {{surgeon}}, Zsh would be my {{scalpel}}."
       ],
       "snippet": "zsh"
     },
     {
       "name": " Neovim",
       "content": [
-        "ES6",
-        "DOM Manipulation",
-        "AJAX"
+        "Neovim is a {{terminal based}} 'text editor' (this is an eternal debate) that enhances the development experience with features like {{plugins}}, {{customization}}, and {{extensibility}}.",
+        "I have been using Neovim for almost {{1 year}}, and I have come to appreciate its speed and efficiency. <br> Its extensibility through plugins and customization has made it my preferred choice for coding. <br> Customizing Neovim with lua, github readme files, youtube tutorials, stackoverflow have given me a greater understanding of software generally and just pulled me deeper into the black hole of {{'the perfect editor'}}. <br> I have fallen in love with its {{development environment}} and can no longer imagine coding without it.",
+        "Neovim has greatly improved my {{productivity}} and {{coding efficiency}}. <br> Its features like {{fuzzy file search}}, {{harpoon}}, and {{vim-motions}} have made coding a much more enjoyable experience for me.",
+        "If I were a {{chef}}, Neovim would be my {{knife}}."
       ],
       "snippet": "nvim"
     }
