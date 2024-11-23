@@ -7,19 +7,16 @@ import {
 
 export function MainContent() {
   const { mainContent } = useContentStore();
-
-  const formattedString = colorizeString("{{ hello }} and {{ welcome }} to my portfolio!");
+  const contentDescription = mainContent?.content;
 
   return (
-    <div className="flex flex-col p-4 overflow-x-hidden overflow-y-auto w-full">
-      <h1 className="text-3xl font-bold text-customGreen">{mainContent.name}</h1>
-      <p dangerouslySetInnerHTML={{ __html: formattedString }}></p>
-      {mainContent?.content?.map((item, index) => (
+    <div className="flex flex-col px-4 pt-10 overflow-x-hidden overflow-y-auto w-full">
+      {contentDescription?.map((str, index) => (
         <p
           key={index}
-          className="text-sm"
+          className="text-md py-4"
+          dangerouslySetInnerHTML={{ __html: colorizeString(str) }}
         >
-          {item}
         </p>
       ))}
     </div>

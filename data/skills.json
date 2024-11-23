@@ -3,9 +3,9 @@
     {
       "name": " HTML",
       "content": [
-        "HTML5",
-        "Semantic HTML",
-        "Accessibility"
+        "{{HTML}} is the {{cornerstone}} of the web, providing the essential structure to {{organize}} content effectively. With several years of experience, I have utilized {{HTML}} to create a variety of projects, from {{static websites}} to {{dynamic web applications}}.",
+        "",
+        "If i were {{kennyS}}, HTML would be my {{trusty AWP}}."
       ],
       "snippet": "html"
     },
