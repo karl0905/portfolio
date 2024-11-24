@@ -31,14 +31,17 @@ const treeContent = [
 const folders = [
   {
     title: "experience",
+    route: "experience",
     content: getExperience(),
   },
   {
     title: "projects",
+    route: "projects",
     content: getProjects(),
   },
   {
     title: "skills_and_tools",
+    route: "skills",
     content: getSkills(),
   },
 ]
@@ -61,7 +64,7 @@ export async function Tree() {
         <Folder
           key={index}
           title={folder.title}
-          route={folder.title}
+          route={folder.route}
           content={folder.content}
         />
       ))}
