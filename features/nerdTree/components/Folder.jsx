@@ -14,7 +14,7 @@ export function Folder({
 
   const [isOpen, setIsOpen] = useState(true);
   const { setSelectedMenuItem, selectedMenuItem } = useMenuStore();
-  const { setContent, mainContent} = useContentStore();
+  const { setContent, mainContent } = useContentStore();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -59,11 +59,17 @@ export function Folder({
           {content.data.map((item, index) => (
             <div
               key={index}
-              className={`w-full cursor-pointer 
+              className={`w-full cursor-pointer flex gap-4 whitespace-nowrap
                 ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
               onClick={() => handleMenuClick(item)}
             >
               <p className='text-md'>{item.name}</p>
+              {title === "experience" && (
+                <>
+                  <p className='text-md text-[var(--orange)]'>@</p>
+                  <p className='text-md'>{item.company}</p>
+                </>
+              )}
             </div>
           ))}
         </div>
