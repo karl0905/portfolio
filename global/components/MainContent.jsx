@@ -6,7 +6,7 @@ import {
 } from '@/global';
 
 export function MainContent() {
-  const { mainContent } = useContentStore();
+  const { mainContent, snippet } = useContentStore();
   const contentDescription = mainContent?.content;
 
   return (
@@ -19,6 +19,11 @@ export function MainContent() {
         >
         </p>
       ))}
+      {snippet && (
+        <pre className="text-md py-4">
+          {snippet}
+        </pre>
+      )}
     </div>
   );
 };

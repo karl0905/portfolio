@@ -5,6 +5,7 @@ import {
   useMenuStore,
   useContentStore
 } from '@/global';
+import { fetchSnippet } from '@/global'
 
 export function Folder({
   title = "title",
@@ -14,7 +15,7 @@ export function Folder({
 
   const [isOpen, setIsOpen] = useState(true);
   const { setSelectedMenuItem, selectedMenuItem } = useMenuStore();
-  const { setContent, mainContent } = useContentStore();
+  const { setContent, mainContent, setSnippet, snippet} = useContentStore();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -38,14 +39,17 @@ export function Folder({
     }
   }
 
-  useEffect(() => {
-    console.log("zustand", mainContent);
-  }, [mainContent]);
-
   const handleMenuClick = async (item, route) => {
     setSelectedMenuItem(item);
     const data = await fetchData(item.name, route);
     setContent(data);
+    if (route === "skills") {
+      console.log("this ran");
+      const snippet = await fetchSnippet(data.snippet);
+      setSnippet(snippet);
+    } else {
+      setSnippet("");
+    }
     console.log("data", data);
   };
 
@@ -61,7 +65,7 @@ export function Folder({
               key={index}
               className={`w-full cursor-pointer flex gap-4 whitespace-nowrap
                 ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
-              onClick={() => handleMenuClick(item)}
+              onClick={() => handleMenuClick(item, route)}
             >
               <p className='text-md'>{item.name}</p>
               {title === "experience" && (
