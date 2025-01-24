@@ -1,12 +1,13 @@
 "use client";
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   useContentStore,
   colorizeString,
+  colorizeSnippet,
 } from '@/global';
 
 export function MainContent() {
-  const { mainContent, snippet } = useContentStore();
+  const { mainContent, snippet, snippetFileType } = useContentStore();
   const contentDescription = mainContent?.content;
 
   return (
@@ -16,15 +17,14 @@ export function MainContent() {
           key={index}
           className="text-md py-4"
           dangerouslySetInnerHTML={{ __html: colorizeString(str) }}
-        >
-        </p>
+        />
       ))}
       {snippet && (
-        <pre className="text-md py-4">
-          {snippet}
+        <pre className="text-md py-4 border border-grey-400 p-4">
+          <code dangerouslySetInnerHTML={{ __html: colorizeSnippet(snippet, snippetFileType) }} />
         </pre>
       )}
     </div>
   );
-};
+}
 

@@ -50,7 +50,7 @@ export async function Tree() {
   return (
     <div
       className="overflow-y-auto overflow-x-none flex flex-col px-4 
-       min-w-[26rem] bg-transparent border-r-2 border-gray-400">
+       min-w-[22rem] bg-transparent border-r-2 border-gray-400">
       {treeContent.map((item, index) => (
         <Fileline
           key={index}

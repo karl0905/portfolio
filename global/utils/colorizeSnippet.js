@@ -1,13 +1,6 @@
-export function colorizeSnippet() {
-  const element = document.getElementsByTagName("code")[0];
+const COLORS = ["text-[var(--green)]", "text-[var(--purple)]", "text-[var(--orange)]"];
 
-  if (element == null) {
-    return;
-  }
-
-  const text = element.innerText;
-  const language = element.classList[0];
-
+export function colorizeSnippet(text, language) {
   const keywords = {
     css: cssKeywords,
     git: gitKeywords,
@@ -21,31 +14,59 @@ export function colorizeSnippet() {
     zsh: zshKeywords,
   }[language];
 
-  if (keywords == null) {
-    return;
+  if (!keywords) {
+    return escapeHtml(text);
   }
 
-  let coloredText = text;
+  let spans = [];
 
   keywords.forEach((subKeywords, i) => {
     if (subKeywords.length === 0) {
       return;
     }
 
-    const regex = new RegExp(`\\b(${subKeywords.join("|")})\\b`, "g");
-    coloredText = coloredText.replaceAll(
-      regex,
-      (match) => `<span class="${COLORS[i]}">${match}</span>`,
-    );
+    // Modified regex to match whole words or CSS property names
+    const regex = new RegExp(`(^|[^-\\w])(${subKeywords.join("|")})(?![\\w-])`, "g");
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+      spans.push({
+        start: match.index + match[1].length,
+        end: match.index + match[0].length,
+        color: COLORS[i],
+        text: match[2]
+      });
+    }
   });
 
-  element.innerHTML = coloredText;
+  spans.sort((a, b) => a.start - b.start);
+
+  let result = '';
+  let lastIndex = 0;
+
+  spans.forEach(span => {
+    result += escapeHtml(text.slice(lastIndex, span.start));
+    result += `<span class="${span.color}">${escapeHtml(span.text)}</span>`;
+    lastIndex = span.end;
+  });
+
+  result += escapeHtml(text.slice(lastIndex));
+
+  return result;
+}
+
+function escapeHtml(unsafe) {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 const cssKeywords = [
-  ["class", "id", "body", "html", "div", "span", "p", "a", "img", "ul", "li"],
-  ["color", "background", "margin", "padding", "font-size", "display", "position", "width", "height", "border", "flex"],
-  ["rgba", "var", "calc", "url", "linear-gradient"]
+  [],
+  ["root", "body", "layer", "utilities", "h1", "p", "pre"],
+  ["background", "font-family", "text-wrap", "font-size", "font-weight", "color", "user-select"]
 ];
 
 const gitKeywords = [

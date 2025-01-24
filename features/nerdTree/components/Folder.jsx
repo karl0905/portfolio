@@ -15,7 +15,14 @@ export function Folder({
 
   const [isOpen, setIsOpen] = useState(true);
   const { setSelectedMenuItem, selectedMenuItem } = useMenuStore();
-  const { setContent, mainContent, setSnippet, snippet} = useContentStore();
+  const {
+    setContent,
+    mainContent,
+    setSnippet,
+    clearSnippet,
+    setSnippetFileType,
+    clearSnippetFileType
+  } = useContentStore();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -45,10 +52,12 @@ export function Folder({
     setContent(data);
     if (route === "skills") {
       console.log("this ran");
+      setSnippetFileType(data.snippet);
       const snippet = await fetchSnippet(data.snippet);
       setSnippet(snippet);
     } else {
-      setSnippet("");
+      clearSnippet();
+      clearSnippetFileType();
     }
     console.log("data", data);
   };
