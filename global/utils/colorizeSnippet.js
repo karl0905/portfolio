@@ -1,4 +1,4 @@
-const COLORS = ["text-[var(--green)]", "text-[var(--purple)]", "text-[var(--orange)]"];
+const COLORS = ["text-[var(--blue)]", "text-[var(--purple)]", "text-[var(--orange)]"];
 
 export function colorizeSnippet(text, language) {
   const keywords = {
@@ -25,7 +25,6 @@ export function colorizeSnippet(text, language) {
       return;
     }
 
-    // Modified regex to match whole words or CSS property names
     const regex = new RegExp(`(^|[^-\\w])(${subKeywords.join("|")})(?![\\w-])`, "g");
     let match;
     while ((match = regex.exec(text)) !== null) {
@@ -76,21 +75,21 @@ const gitKeywords = [
 ];
 
 const htmlKeywords = [
-  ["html", "head", "body", "div", "span", "p", "a", "img", "ul", "li", "form"],
-  ["class", "id", "style", "href", "src", "alt", "type", "value", "placeholder"],
-  ["<!DOCTYPE>", "<meta>", "<link>", "<script>"]
+  [],
+  ["head", "meta", "title"],
+  ["charset", "name", "content"]
 ];
 
 const javascriptKeywords = [
-  ["function", "var", "let", "const", "if", "else", "for", "while", "switch", "case"],
-  ["return", "break", "continue", "this", "new", "typeof", "instanceof", "null", "undefined"],
-  ["console.log", "parseInt", "JSON.stringify", "Math.random", "Array.isArray"]
+  ["a", "b", "text", "language", "subKeywords", "0", "1", "i", "2", "span"],
+  ["function", "export", "return", "const", "let", "if", "while"],
+  ["forEach", "RegExp", "push", "sort", "slice", "join", "exec", "escapeHtml"]
 ];
 
 const reactKeywords = [
-  ["React", "Component", "useState", "useEffect", "useContext", "props", "state"],
-  ["render", "return", "className", "onClick", "onChange", "onSubmit", "key"],
-  ["ReactDOM.render", "createElement", "cloneElement", "createContext"]
+  ["useContentStore", "MainContent", "colorizeString", "colorizeSnippet"],
+  ["function", "const", "return"],
+  ["@/global", "str", "index"]
 ];
 
 const nodeKeywords = [

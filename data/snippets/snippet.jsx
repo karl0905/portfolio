@@ -1,4 +1,3 @@
-"use client";
 import {
   useContentStore,
   colorizeString,
@@ -26,3 +25,4 @@ export function MainContent() {
     </div>
   );
 }
+

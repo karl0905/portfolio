@@ -1,0 +1,17 @@
+export async function getServerSideProps({ params }) {
+  const { filetype } = params;
+  const res = await fetch(`/api/snippets/${filetype}`);
+  const snippet = await res.json();
+
+  return { props: { snippet } };
+}
+
+export default function SnippetPage({ snippet }) {
+  return (
+    <div>
+      <pre>
+        <code>{snippet}</code>
+      </pre>
+    </div>
+  );
+}
