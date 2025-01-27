@@ -82,9 +82,9 @@ const htmlKeywords = [
 ];
 
 const javascriptKeywords = [
-  ["a", "b", "text", "language", "subKeywords", "0", "1", "i", "2", "span"],
+  ["a", "b", "subKeywords", "0", "1", "i", "2", "span", "colorizeSnippet", "exec"],
   ["function", "export", "return", "const", "let", "if", "while"],
-  ["forEach", "RegExp", "push", "sort", "slice", "join", "exec", "escapeHtml"]
+  ["forEach", "RegExp", "push", "sort", "slice", "join", "escapeHtml", "text", "language", "COLORS"]
 ];
 
 const reactKeywords = [
@@ -97,6 +97,12 @@ const nextKeywords = [
   ["export", "async", "function", "const", "await", "return", "default"],
   ["getServerSideProps", "SnippetPage", "fetch", "json"],
   ["params", "props", "$"]
+];
+
+const tailwindKeywords = [
+  ["use client", "import", "export", "function", "return", "const"],
+  ["Button", "twJoin"],
+  ["title", "variant", "disabled", "onClick"]
 ];
 
 const nodeKeywords = [
@@ -115,12 +121,6 @@ const sqlKeywords = [
   ["SELECT", "FROM", "WHERE", "INSERT", "UPDATE", "DELETE", "CREATE", "ALTER", "DROP", "TABLE"],
   ["JOIN", "INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "GROUP BY", "ORDER BY", "HAVING", "LIMIT"],
   ["COUNT()", "SUM()", "AVG()", "MAX()", "MIN()", "DISTINCT", "AS"]
-];
-
-const tailwindKeywords = [
-  ["flex", "grid", "container", "text-", "bg-", "p-", "m-", "w-", "h-", "rounded-"],
-  ["sm:", "md:", "lg:", "xl:", "2xl:", "hover:", "focus:", "active:"],
-  ["@apply", "@screen", "@variants", "@responsive", "@tailwind"]
 ];
 
 const zshKeywords = [
