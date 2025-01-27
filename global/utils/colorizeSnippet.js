@@ -7,6 +7,7 @@ export function colorizeSnippet(text, language) {
     html: htmlKeywords,
     js: javascriptKeywords,
     jsx: reactKeywords,
+    next: nextKeywords,
     njs: nodeKeywords,
     php: phpKeywords,
     sql: sqlKeywords,
@@ -90,6 +91,12 @@ const reactKeywords = [
   ["useContentStore", "MainContent", "colorizeString", "colorizeSnippet"],
   ["function", "const", "return"],
   ["@/global", "str", "index"]
+];
+
+const nextKeywords = [
+  ["export", "async", "function", "const", "await", "return", "default"],
+  ["getServerSideProps", "SnippetPage", "fetch", "json"],
+  ["params", "props", "$"]
 ];
 
 const nodeKeywords = [
