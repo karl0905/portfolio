@@ -1,0 +1,28 @@
+SELECT
+  p.id AS project_id,
+  p.name AS project_name,
+  p.tech_stack,
+  p.github_url,
+  p.live_demo,
+  pi.cool_rating,
+  pi.lines_of_code,
+  pi.project_description,
+  COUNT(viewer_reactions.project_id) AS wow_factor
+FROM
+  portfolio_projects p
+INNER JOIN project_details pi
+  ON p.id = pi.ID
+LEFT JOIN viewer_reactions
+  ON p.id = viewer_reactions.project_id
+GROUP BY
+  p.id,
+  p.name,
+  p.tech_stack,
+  p.github_url,
+  p.live_demo,
+  pi.cool_rating,
+  pi.lines_of_code,
+  pi.project_description
+HAVING
+  wow_factor > 9000
+LIMIT 42

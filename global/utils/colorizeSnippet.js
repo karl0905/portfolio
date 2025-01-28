@@ -3,16 +3,14 @@ const COLORS = ["text-[var(--blue)]", "text-[var(--purple)]", "text-[var(--orang
 export function colorizeSnippet(text, language) {
   const keywords = {
     css: cssKeywords,
-    git: gitKeywords,
     html: htmlKeywords,
     js: javascriptKeywords,
     jsx: reactKeywords,
     next: nextKeywords,
     njs: nodeKeywords,
     php: phpKeywords,
-    sql: sqlKeywords,
+    mysql: mysqlKeywords,
     tw: tailwindKeywords,
-    zsh: zshKeywords,
   }[language];
 
   if (!keywords) {
@@ -106,25 +104,20 @@ const tailwindKeywords = [
 ];
 
 const nodeKeywords = [
-  ["require", "module.exports", "process", "__dirname", "__filename"],
-  ["async", "await", "Promise", "Buffer", "fs", "http", "path"],
-  ["readFile", "writeFile", "createServer", "listen", "connect"]
+  ["log", "once", "schedule", "getRecentMatch", "getDescriptions", "getMostRecentMatch", "writeMostRecentMatch", "buildNotificationEmbed"],
+  ["const", "try", "catch", "if", "else", "return", "async", "await"],
+  ["console"]
 ];
+
 
 const phpKeywords = [
-  ["<?php", "?>", "echo", "print", "if", "else", "elseif", "foreach", "while", "function"],
-  ["$", "public", "private", "protected", "class", "new", "return", "include", "require"],
-  ["array()", "strlen()", "isset()", "empty()", "die()", "mysqli_connect()"]
+  ["getallheaders", "isset", "http_response_code", "json_encode", "exit", "preg_match", "query", "fetch_object", "DateTime", "return"],
+  ["function", "if", "else", "echo"],
+  ["\\$", "->", "\\$mySQL", "\\$headers", "\\$authHeader", "\\$bearerToken", "\\$sql", "\\$result", "\\$currentDateTime", "\\$accessTokenExpiry", "user_id", "access_token_expiry", "401", "1", "\\$matches"]
 ];
 
-const sqlKeywords = [
-  ["SELECT", "FROM", "WHERE", "INSERT", "UPDATE", "DELETE", "CREATE", "ALTER", "DROP", "TABLE"],
-  ["JOIN", "INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "GROUP BY", "ORDER BY", "HAVING", "LIMIT"],
-  ["COUNT()", "SUM()", "AVG()", "MAX()", "MIN()", "DISTINCT", "AS"]
-];
-
-const zshKeywords = [
-  ["if", "then", "else", "fi", "for", "do", "done", "while", "case", "esac"],
-  ["export", "alias", "unalias", "source", "echo", "print", "read", "local"],
-  ["$PATH", "$HOME", "$USER", "$SHELL", "${}", "$()", "``"]
+const mysqlKeywords = [
+  [],
+  ["SELECT", "AS", "FROM", "INNER JOIN", "LEFT JOIN", "ON", "GROUP BY", "HAVING", "LIMIT", "COUNT"],
+  ["9000", "42"]
 ];
