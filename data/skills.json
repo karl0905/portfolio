@@ -122,7 +122,8 @@
       "name": " Neovim",
       "content": [
         "Neovim is a {{terminal based}} 'text editor' (this is an eternal debate) that enhances the development experience with features like {{plugins}}, {{customization}}, and {{extensibility}}.",
-        "I have been using Neovim for almost {{1 year}}, and I have come to appreciate its speed and efficiency. <br> Its extensibility through plugins and customization has made it my preferred choice for coding. <br> Customizing Neovim with lua, github readme files, youtube tutorials, stackoverflow have given me a greater understanding of software generally and just pulled me deeper into the black hole of {{'the perfect editor'}}. <br> I have fallen in love with its {{development environment}} and can no longer imagine coding without it.",
+        "I have been using Neovim for almost {{1 year}}, and I have come to appreciate its speed and efficiency. <br> Its extensibility through plugins and customization has made it my preferred choice for coding.", 
+        "{{Customizing}} Neovim with lua, github readme files, youtube tutorials and {{community forums}} like stackoverflow have given me a greater understanding of software generally and just pulled me deeper into the black hole of {{'the perfect editor'}}. <br> I have fallen in love with its {{development environment}} and can no longer imagine coding without it.",
         "Neovim has greatly improved my {{productivity}} and {{coding efficiency}}. <br> Its features like {{fuzzy file search}}, {{harpoon}}, and {{vim-motions}} have made coding a much more enjoyable experience for me.",
         "If I were a {{chef}}, Neovim would be my {{knife}}."
       ],
