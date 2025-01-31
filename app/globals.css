@@ -85,6 +85,14 @@ pre {
   scrollbar-color: var(--grey) transparent; /* Thumb color and transparent track for react-terminal */
 }
 
+.react-terminal-wrapper {
+  height: 100%;
+}
+
+.react-terminal-window-buttons {
+  display: none !important;
+}
+
 
 /* ---------------------------- Global scrollbar styles for all elements --------------------- */
 

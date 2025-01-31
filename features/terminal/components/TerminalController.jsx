@@ -92,9 +92,9 @@ export function TerminalController() {
   };
 
   return (
-    <div className="container">
+    <div className="w-screen h-screen">
       <Terminal
-        name='Karl zsh'
+        name=''
         colorMode={ColorMode.Dark}
         onInput={handleInput}
         onChange={setCurrentInput} // Update current input as user types

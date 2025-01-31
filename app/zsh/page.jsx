@@ -1,7 +1,9 @@
+import { TerminalController } from "@/features/terminal"
+
 export default function zsh() {
   return (
     <>
-      <h1 className=''>ZSH</h1>
+      <TerminalController />
     </>
   );
 }
