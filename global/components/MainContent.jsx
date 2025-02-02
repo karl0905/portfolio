@@ -10,7 +10,7 @@ export function MainContent() {
   const contentDescription = mainContent?.content;
 
   return (
-    <div className="flex flex-col px-4 pt-10 overflow-x-hidden overflow-y-auto w-full gap-12">
+    <div className="flex flex-col px-4 pt-10 overflow-x-hidden overflow-y-auto w-full grow gap-12">
       <div>
         {contentDescription?.map((str, index) => (
           <p

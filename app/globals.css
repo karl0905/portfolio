@@ -87,10 +87,17 @@ pre {
 
 .react-terminal-wrapper {
   height: 100%;
+  padding: 10px !important;
 }
 
 .react-terminal-window-buttons {
   display: none !important;
+}
+
+.terminal-hidden-input {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 

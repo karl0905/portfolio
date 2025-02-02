@@ -6,10 +6,9 @@ import {
 export default function Home() {
 
   return (
-    <div className='flex'>
+    <div className='flex w-screen'>
       <Tree />
       <MainContent />
     </div>
   );
 }
-

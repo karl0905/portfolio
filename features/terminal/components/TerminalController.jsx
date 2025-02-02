@@ -2,47 +2,55 @@
 import React, { useState, useEffect } from 'react';
 import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 import { useMediaQuery } from '@/global';
-import DOMPurify from 'dompurify'; // Import DOMPurify
+import DOMPurify from 'dompurify';
+import { useTerminalStore } from '@/features/terminal';
 
 export function TerminalController() {
   const mediaQuery = useMediaQuery();
-  const [terminalLineData, setTerminalLineData] = useState([]);
+  const {
+    terminalLineData,
+    setTerminalLineData,
+    addTerminalLine,
+    addCommand,
+    clearTerminal
+  } = useTerminalStore();
+  const [currentInput, setCurrentInput] = useState('');
 
   useEffect(() => {
+    if (terminalLineData.length === 0) {
       const asciiArt =
-    <pre className='whitespace-pre leading-5 -translate-y-14'>
-      {`
+        <pre className='whitespace-pre leading-5 -translate-y-14'>
+          {`
     __ __              __   __                                   __        __     __
    / //_/____ _ _____ / /  / /   _____  _   __ ___   ____   ____/ /____ _ / /_   / /
   / ,<  / __ \`// ___// /  / /   / _// \\| | / // _ \\ / __ \\ / __  // __ \`// __ \\ / / 
  / /| |/ /_/ // /   / /  / /___/ //// /| |/ //  __// / / // /_/ // /_/ // / / // /  
 /_/ |_|\\__,_//_/   /_/  /_____/\\_//__/ |___/ \\___//_/ /_/ \\__,_/ \\__,_//_/ /_//_/   
-      `}
-    </pre>
+          `}
+        </pre>
 
-    const lines = [
-      mediaQuery === 'desktop' ? <TerminalOutput key="asciiArt">{asciiArt}</TerminalOutput> : null,
-      <TerminalOutput key="welcome1">Welcome to the Karl terminal</TerminalOutput>,
-      <TerminalOutput key="welcome2">Type a command to get started</TerminalOutput>,
-      <TerminalOutput key="welcome3">Here are a few suggestions:</TerminalOutput>,
-      <TerminalOutput key="suggestion1"><strong>help </strong> --to see all available commands</TerminalOutput>,
-      <TerminalOutput key="suggestion2"><strong>hello </strong> --to greet the terminal</TerminalOutput>,
-      <TerminalOutput className="whitespace-normal" key="suggestion3"><strong>echo &#123;input&#125; </strong> --echo something out in the terminal</TerminalOutput>
-    ];
+      const lines = [
+        mediaQuery === 'desktop' ? <TerminalOutput key="asciiArt">{asciiArt}</TerminalOutput> : null,
+        <TerminalOutput key="welcome1">Welcome to the Karl terminal</TerminalOutput>,
+        <TerminalOutput key="welcome2">Type a command to get started</TerminalOutput>,
+        <TerminalOutput key="welcome3">Here are a few suggestions:</TerminalOutput>,
+        <TerminalOutput key="suggestion1"><strong>help </strong> --to see all available commands</TerminalOutput>,
+        <TerminalOutput key="suggestion2"><strong>hello </strong> --to greet the terminal</TerminalOutput>,
+        <TerminalOutput className="whitespace-normal" key="suggestion3"><strong>echo &#123;input&#125; </strong> --echo something out in the terminal</TerminalOutput>
+      ];
 
-    setTerminalLineData(lines);
-  }, [mediaQuery]); 
+      setTerminalLineData(lines);
+    }
+  }, [mediaQuery, setTerminalLineData, terminalLineData.length]);
 
   console.log(mediaQuery);
-  const [commandHistory, setCommandHistory] = useState([]);
-  const [currentInput, setCurrentInput] = useState('');
 
   // Define commands and their corresponding actions
   const commands = {
     hello: () => 'Hello, world!',
     date: () => new Date().toString(),
     clear: () => {
-      setTerminalLineData([]);
+      clearTerminal();
       return ''; // Clear command returns empty output
     },
     echo: (args) => {
@@ -74,21 +82,19 @@ export function TerminalController() {
 
     // Update terminal output and command history
     addOutput(input, output);
+    addCommand(input);
     setCurrentInput(''); // Clear current input after processing
   };
 
   // Function to add output to terminal
   const addOutput = (input, output) => {
-    setCommandHistory(prev => [...prev, input]); // Store command history
-
     // Sanitize output before rendering it
     const sanitizedOutput = typeof output === 'string' ? DOMPurify.sanitize(output) : output;
 
-    setTerminalLineData(prev => [
-      ...prev,
-      <TerminalOutput key={prev.length + 1}>{`$ ${input} `}</TerminalOutput>, // Display the command
-      sanitizedOutput && <TerminalOutput key={prev.length + 2}>{sanitizedOutput}</TerminalOutput> // Display sanitized output only if it exists
-    ]);
+    addTerminalLine(<TerminalOutput>{`$ ${input}`}</TerminalOutput>);
+    if (sanitizedOutput) {
+      addTerminalLine(<TerminalOutput>{sanitizedOutput}</TerminalOutput>);
+    }
   };
 
   return (
