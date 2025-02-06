@@ -48,7 +48,10 @@ pre {
 .react-terminal-line {
   white-space: pre-wrap !important;
   font-size: 14px;
-  overflow-x: hidden;
+  overflow: visible !important; /* Change from hidden to visible */
+  height: auto !important; /* Ensure it takes the space it needs */
+  min-height: fit-content;
+  flex-shrink: 0; /* This prevents the lines from shrinking/squishing */
 }
 
 .react-terminal-input:before {
@@ -81,13 +84,17 @@ pre {
 
 /* Firefox scrollbar styles for all elements */
 .react-terminal {
-  scrollbar-width: thin; /* Make scrollbar thin for react-terminal */
-  scrollbar-color: var(--grey) transparent; /* Thumb color and transparent track for react-terminal */
+  min-height: 98%;
+  max-height: 98vh; /* Add this to prevent infinite expansion */
+  overflow-y: auto !important;
+  overflow-x: hidden !important; /* Prevent horizontal scroll */
 }
 
 .react-terminal-wrapper {
   height: 100%;
   padding: 10px !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .react-terminal-window-buttons {
