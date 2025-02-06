@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 import { useMediaQuery } from '@/global';
 import DOMPurify from 'dompurify';
-import { useTerminalStore } from '@/features/terminal';
+import { useTerminalStore, figlet } from '@/features/terminal';
+import skillsContent from '@/features/terminal/assets/skills.md'
+import educationContent from '@/features/terminal/assets/education.md'
+import experienceContent from '@/features/terminal/assets/experience.md'
 
 export function TerminalController() {
   const mediaQuery = useMediaQuery();
@@ -20,13 +23,7 @@ export function TerminalController() {
     if (terminalLineData.length === 0) {
       const asciiArt =
         <pre className='whitespace-pre leading-5 -translate-y-14'>
-          {`
-    __ __              __   __                                   __        __     __
-   / //_/____ _ _____ / /  / /   _____  _   __ ___   ____   ____/ /____ _ / /_   / /
-  / ,<  / __ \`// ___// /  / /   / _// \\| | / // _ \\ / __ \\ / __  // __ \`// __ \\ / / 
- / /| |/ /_/ // /   / /  / /___/ //// /| |/ //  __// / / // /_/ // /_/ // / / // /  
-/_/ |_|\\__,_//_/   /_/  /_____/\\_//__/ |___/ \\___//_/ /_/ \\__,_/ \\__,_//_/ /_//_/   
-          `}
+          {figlet}
         </pre>
 
       const lines = [
@@ -45,6 +42,22 @@ export function TerminalController() {
 
   console.log(mediaQuery);
 
+  // Definition of files in terminal
+  const current_dir = [
+    {
+      "name": "skills.md",
+      "content": skillsContent
+    },
+    {
+      "name": "education.md",
+      "content": educationContent
+    },
+    {
+      "name": "experience.md",
+      "content": experienceContent
+    }
+  ]
+
   // Define commands and their corresponding actions
   const commands = {
     hello: () => 'Hello, world!',
@@ -62,6 +75,31 @@ export function TerminalController() {
       return args.join(' ');
     },
     help: () => 'Available commands: hello, date, clear, echo',
+    ls: () => {
+      return current_dir.map((file) => file.name).join(' ');
+    },
+    cat: (args) => {
+      if (args.length === 0) {
+        return (
+          <span style={{ color: 'red' }}>
+            cat: missing file operand
+          </span>
+        )
+      }
+      for (const arg of args) {
+        const file = current_dir.find((file) => file.name === arg);
+        if (!file) {
+          return (
+            <span style={{ color: 'red' }}>
+              cat: {arg}: No such file or directory
+            </span>
+          )
+        } else {
+          return file.content + '\n';
+        }
+      }
+      return output.trim();
+    },
     default: (input) => {
       return (
         <span style={{ color: 'red' }}>
