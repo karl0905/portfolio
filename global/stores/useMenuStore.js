@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
 export const useMenuStore = create((set) => ({
-  selectedMenuItem: null,
+  selectedMenuItem: { name: "home.jsx"},
   setSelectedMenuItem: (item) => set({ selectedMenuItem: item }),
 }));

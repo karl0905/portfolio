@@ -31,12 +31,12 @@ h1 {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text);
 }
 
 pre {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text);
 }
 
@@ -47,7 +47,7 @@ pre {
 /* Terminal Line Styles */
 .react-terminal-line {
   white-space: pre-wrap !important;
-  font-size: 14px;
+  font-size: 16px;
   overflow: visible !important; /* Change from hidden to visible */
   height: auto !important; /* Ensure it takes the space it needs */
   min-height: fit-content;

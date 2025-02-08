@@ -1,7 +1,10 @@
 import { create } from 'zustand';
+import readmeData from '@/data/readme.json';
+
+const startdata = readmeData.data[0];
 
 export const useContentStore = create((set) => ({
-  mainContent: {},
+  mainContent: startdata,
   snippet: "",
 
   setContent: (newContent) => set({ mainContent: newContent }),

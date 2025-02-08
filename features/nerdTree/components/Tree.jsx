@@ -3,6 +3,7 @@ import {
   getExperience,
   getProjects,
   getSkills,
+  getReadme
 } from "@/global";
 
 const treeContent = [
@@ -28,6 +29,14 @@ const treeContent = [
   },
 ];
 
+const files = [
+  {
+    title: "README.md",
+    route: "readme",
+    type: "file",
+    content: getReadme(),
+  },
+]
 const folders = [
   {
     title: "experience",
@@ -59,7 +68,15 @@ export async function Tree() {
           hexcode={item.hexcode}
         />
       ))}
-
+      {files.map((file, index) => (
+        <Fileline
+          key={index}
+          title={file.title}
+          route={file.route}
+          content={file.content}
+        />
+      )
+      )}
       {folders.map((folder, index) => (
         <Folder
           key={index}
@@ -67,7 +84,8 @@ export async function Tree() {
           route={folder.route}
           content={folder.content}
         />
-      ))}
+      ))
+      }
     </div>
   );
 }
