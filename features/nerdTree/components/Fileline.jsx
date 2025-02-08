@@ -12,13 +12,16 @@ export function Fileline({
   type = "file",
   hexcode,
   route,
-  title
+  title,
+  onClick = () => { }
 }) {
 
   const { setSelectedMenuItem, selectedMenuItem } = useMenuStore();
+
   useEffect(() => {
     console.log("selectedMenuItem", selectedMenuItem);
   }, [selectedMenuItem]);
+
   const {
     setContent,
     setSnippet,
@@ -62,41 +65,46 @@ export function Fileline({
   };
 
   return (
-    <>
-      {type === 'dir'
-        ? (
-          <p className="text-md text-[#7394d5]">
-            {content}
-          </p>
-        )
-        : type === 'file'
+    < >
+      {
+        type === 'dir'
           ? (
-            <div className="ml-6">
-              {content.data.map((item, index) => (
-                <div
-                  key={index}
-                  className={`w-full cursor-pointer flex gap-4 whitespace-nowrap
-                ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
-                  onClick={() => handleMenuClick(item, route)}
-                >
-                  <p className='text-md'>{item.name}</p>
-                  {title === "experience" && (
-                    <>
-                      <p className='text-md text-[var(--orange)]'>@</p>
-                      <p className='text-md'>{item.company}</p>
-                    </>
-                  )}
-                </div>
-              ))}
-            </div>
+            <p className="text-md text-[#7394d5]">
+              {content}
+            </p>
           )
-          : type === 'misc'
+          : type === 'file'
             ? (
-              <p className="text-md" style={{ color: `#${hexcode}` }}>
-                {content}
-              </p>
+              <
+                div className="ml-6"
+                onClick={onClick}
+              >
+                {content.data.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`w-full cursor-pointer flex gap-4 whitespace-nowrap
+                ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
+                    onClick={() => handleMenuClick(item, route)}
+                  >
+                    <p className='text-md'>{item.name}</p>
+                    {title === "experience" && (
+                      <>
+                        <p className='text-md text-[var(--orange)]'>@</p>
+                        <p className='text-md'>{item.company}</p>
+                      </>
+                    )}
+                  </div>
+                ))}
+              </div>
             )
-            : null}
+            : type === 'misc'
+              ? (
+                <p className="text-md" style={{ color: `#${hexcode}` }}>
+                  {content}
+                </p>
+              )
+              : null
+      }
     </>
   );
 }

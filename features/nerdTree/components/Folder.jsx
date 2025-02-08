@@ -5,7 +5,8 @@ import { Fileline } from '@/features/nerdTree';
 export function Folder({
   title = "title",
   route = "skills",
-  content = { data: [] }
+  content = { data: [] },
+  onClick = () => { }
 }) {
 
   const [isOpen, setIsOpen] = useState(true);
@@ -25,6 +26,7 @@ export function Folder({
           hexcode="9574d7"
           route={route}
           content={content}
+          onClick={onClick}
         />
       )}
     </div>

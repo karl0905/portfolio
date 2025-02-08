@@ -1,10 +1,14 @@
+"use client"
+import { useState } from 'react';
 import { Fileline, Folder } from "@/features/nerdTree";
 import {
   getExperience,
   getProjects,
   getSkills,
-  getReadme
+  getReadme,
+  useMediaQuery
 } from "@/global";
+import { Squeeze as Hamburger } from 'hamburger-react'
 
 const treeContent = [
   {
@@ -55,37 +59,58 @@ const folders = [
   },
 ]
 
-export async function Tree() {
+export function Tree() {
+  const mediaQuery = useMediaQuery();
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <div
-      className="overflow-y-auto overflow-x-none flex flex-col px-4 
-       min-w-[22rem] bg-transparent border-r-2 border-gray-400">
-      {treeContent.map((item, index) => (
-        <Fileline
-          key={index}
-          content={item.content}
-          type={item.type}
-          hexcode={item.hexcode}
-        />
-      ))}
-      {files.map((file, index) => (
-        <Fileline
-          key={index}
-          title={file.title}
-          route={file.route}
-          content={file.content}
-        />
-      )
+    <>
+      {mediaQuery !== 'desktop' && (
+        <div className='absolute top-7 left-2'>
+          <Hamburger
+            toggled={isOpen}
+            toggle={setOpen}
+            color="var(--text)"
+            duration={0.2}
+          />
+        </div>
       )}
-      {folders.map((folder, index) => (
-        <Folder
-          key={index}
-          title={folder.title}
-          route={folder.route}
-          content={folder.content}
-        />
-      ))
-      }
-    </div>
+      {
+        (isOpen || mediaQuery === 'desktop') && (
+          <div
+            className="overflow-y-auto overflow-x-none flex flex-col px-4 
+        min-w-[22rem] bg-transparent border-r-2 border-gray-400">
+            {treeContent.map((item, index) => (
+              <Fileline
+                key={index}
+                content={item.content}
+                type={item.type}
+                hexcode={item.hexcode}
+                onClick={() => { setOpen(false) }}
+              />
+            ))}
+            {files.map((file, index) => (
+              <Fileline
+                key={index}
+                title={file.title}
+                route={file.route}
+                content={file.content}
+                onClick={() => { setOpen(false) }}
+              />
+            )
+            )}
+            {folders.map((folder, index) => (
+              <Folder
+                key={index}
+                title={folder.title}
+                route={folder.route}
+                content={folder.content}
+                onClick={() => { setOpen(false) }}
+              />
+            ))
+            }
+          </div>
+        )}
+    </>
   );
 }

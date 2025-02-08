@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useMediaQuery } from '@/global';
 
 import {
   TmuxTab,
@@ -32,6 +33,7 @@ const dateTab = {
 }
 
 export function TmuxLine() {
+  const mediaQuery = useMediaQuery();
   const route = usePathname();
   const [currentSite, setCurrentSite] = useState(route);
   return (
@@ -50,7 +52,9 @@ export function TmuxLine() {
           />
         ))
       }
-      <DateTab title={dateTab.title} icon={dateTab.icon} />
+      {mediaQuery !== 'smallMobile' && (
+        <DateTab title={dateTab.title} icon={dateTab.icon} />
+      )}
     </div>
   );
 }

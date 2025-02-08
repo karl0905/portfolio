@@ -1,6 +1,6 @@
 import { Tree } from '@/features/nerdTree';
 import {
-  MainContent
+  MainContent,
 } from '@/global';
 
 export default function Home() {
