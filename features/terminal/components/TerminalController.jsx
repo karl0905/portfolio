@@ -78,7 +78,7 @@ export function TerminalController() {
       // Join the arguments to form the echoed string
       return args.join(' ');
     },
-    help: () => 'Available commands: hello, date, clear, echo',
+    help: () => 'Available commands: hello, date, clear, echo, ls, cat',
     ls: () => {
       return current_dir.map((file) => file.name).join(' ');
     },

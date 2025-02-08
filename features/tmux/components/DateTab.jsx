@@ -27,7 +27,7 @@ export function DateTab({ icon }) {
   }, []);
 
   return (
-    <div className={`ml-auto relative flex items-center h-5 text-white bg-[#545a78]`}>
+    <div className={`md:flex hidden ml-auto relative items-center h-5 text-white bg-[#545a78]`}>
       {/* Left Triangle Cutout with Icon */}
       <div className="relative flex items-center h-full">
         {/* Icon Box with Left-pointing Triangle Arrow */}

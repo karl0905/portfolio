@@ -2,9 +2,7 @@
 
 // Components
 export * from './components/MainContent';
-
-// Blocks 
-export * from './blocks/ParticleBackground';
+export * from './components/ProjectButton'
 
 // Hooks 
 export * from './hooks/useMediaQuery';

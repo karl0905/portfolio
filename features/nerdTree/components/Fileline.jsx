@@ -18,16 +18,13 @@ export function Fileline({
 
   const { setSelectedMenuItem, selectedMenuItem } = useMenuStore();
 
-  useEffect(() => {
-    console.log("selectedMenuItem", selectedMenuItem);
-  }, [selectedMenuItem]);
-
   const {
     setContent,
     setSnippet,
     clearSnippet,
     setSnippetFileType,
-    clearSnippetFileType
+    clearSnippetFileType,
+    mainContent
   } = useContentStore();
 
   async function fetchData(name) {
@@ -61,7 +58,7 @@ export function Fileline({
       clearSnippet();
       clearSnippetFileType();
     }
-    console.log("data", data);
+    console.log("content", mainContent)
   };
 
   return (
