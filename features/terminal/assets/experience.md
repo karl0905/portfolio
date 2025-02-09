@@ -1,4 +1,4 @@
-## Experience
+# Experience
 
 -   **Company:** [Cernel.ai]
     -   **Title:** [Frontend Developer - Intern]

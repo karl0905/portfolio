@@ -1,4 +1,4 @@
-## Education
+# Education
 
 -   **Institution Name:** [Business Academy Aarhus]
     -   **Program:** [Web Development - Ervervsakademiuddannelse]

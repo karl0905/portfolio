@@ -15,53 +15,56 @@ export function MainContent() {
 
   return (
     <div className={` flex flex-col px-4 pt-10 overflow-y-auto w-full grow gap-8 `}>
-      <div className='max-w-[1200px]'>
+      <div className='max-w-[1200px] pb-4'>
         {mainContent?.name === "home.jsx" && (
           <div className={`flex gap-12 flex-wrap mb-8 items-center`}>
             <pre className='text-[0.8px]/[3px] tracking-[1.2px] '>{karl}</pre>
             <pre className='hidden lg:flex text-[9px]/[9px] tracking-[0.3px]'>{figlet}</pre>
           </div>
         )}
-        {mainContent.type === "project" && (
+        {(mainContent.type === "project" || mainContent.type === "experience") && (
           <>
             <h1
-              dangerouslySetInnerHTML={{ __html: colorizeString(mainContent.title) }}
+              dangerouslySetInnerHTML={{ __html: colorizeString(`{{` + mainContent.title + `}}`) }}
             />
             <p
-              dangerouslySetInnerHTML={{ __html: colorizeString(mainContent.date) }}
+              dangerouslySetInnerHTML={{ __html: colorizeString(`{{` + mainContent.date + `}}`) }}
             />
-            < div className='flex gap-12 p-8' >
-              {
-                mainContent.links.map((link, index) => (
+            {mainContent.type === "project" && (
+              <div className='flex gap-12 p-8'>
+                {mainContent.links.map((link, index) => (
                   <ProjectButton
                     key={index}
                     href={link.url}
                     title={link.title}
                   />
-                ))
-              }
-            </div>
+                ))}
+              </div>
+            )}
             <div className='flex w-full gap-4 py-4 flex-wrap'>
-              {mainContent?.images.map((image, index) => (
-                <div key={index} className='relative w-72 h-72'>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-              ))}
             </div>
           </>
         )}
         <div>
           {contentDescription?.map((str, index) => (
-            <p
-              key={index}
-              className="text-md py-2"
-              dangerouslySetInnerHTML={{ __html: colorizeString(str) }}
-            />
+            <>
+              <p
+                key={index}
+                className="text-md py-2"
+                dangerouslySetInnerHTML={{ __html: colorizeString(str) }}
+              />
+              {mainContent.images?.[index] && (
+                <div key={index} className='relative w-96 h-80 border border-[var(--text)]'>
+                  <Image
+                    src={mainContent.images[index].src}
+                    alt={mainContent.images[index].alt}
+                    layout="fill"
+                    objectFit="contain"
+                    className='p-4'
+                  />
+                </div>
+              ) }
+            </>
           ))}
         </div>
         {snippet && (

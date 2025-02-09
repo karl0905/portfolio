@@ -63,7 +63,7 @@ export function Tree() {
 
   return (
     <>
-      <div className='absolute lg:hidden top-7 left-2'>
+      <div className='absolute lg:hidden top-7 left-2 z-10'>
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
