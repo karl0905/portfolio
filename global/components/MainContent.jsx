@@ -9,7 +9,7 @@ import karl from '@/public/karl.md';
 import { figlet } from '@/features/terminal'
 import Image from 'next/image';
 
-export function MainContent() {
+export function MainContent({ children }) {
   const { mainContent, snippet, snippetFileType } = useContentStore();
   const contentDescription = mainContent?.content;
 
@@ -23,7 +23,7 @@ export function MainContent() {
           </div>
         )}
         {(mainContent.type === "project" || mainContent.type === "experience") && (
-          <>
+          <div className='pb-6'>
             <h1
               dangerouslySetInnerHTML={{ __html: colorizeString(`{{` + mainContent.title + `}}`) }}
             />
@@ -41,38 +41,34 @@ export function MainContent() {
                 ))}
               </div>
             )}
-            <div className='flex w-full gap-4 py-4 flex-wrap'>
-            </div>
-          </>
+          </div>
         )}
-        <div>
-          {contentDescription?.map((str, index) => (
-            <>
-              <p
-                key={index}
-                className="text-md py-2"
-                dangerouslySetInnerHTML={{ __html: colorizeString(str) }}
-              />
-              {mainContent.images?.[index] && (
-                <div key={index} className='relative w-96 h-80 border border-[var(--text)]'>
-                  <Image
-                    src={mainContent.images[index].src}
-                    alt={mainContent.images[index].alt}
-                    layout="fill"
-                    objectFit="contain"
-                    className='p-4'
-                  />
-                </div>
-              ) }
-            </>
-          ))}
-        </div>
+        {contentDescription?.map((str, index) => (
+          <div key={index}>
+            <p
+              className="text-md py-2"
+              dangerouslySetInnerHTML={{ __html: colorizeString(str) }}
+            />
+            {mainContent.images?.[index] && (
+              <div className='relative w-96 h-80 border border-[var(--text)]'>
+                <Image
+                  src={mainContent.images[index].src}
+                  alt={mainContent.images[index].alt}
+                  layout="fill"
+                  objectFit="contain"
+                  className='p-4'
+                />
+              </div>
+            )}
+          </div>
+        ))}
         {snippet && (
           <pre className="text-sm border border-grey-400 p-4 whitespace-pre-wrap">
             <code dangerouslySetInnerHTML={{ __html: colorizeSnippet(snippet, snippetFileType) }} />
           </pre>
         )}
       </div>
+      {children}
     </div >
   );
 }

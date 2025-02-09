@@ -5,6 +5,7 @@
 :root {
   --background: #1c1c1c; /* Dark Slate */
   --foreground: #171717; /* Very Dark Gray */
+  --lightGrey: #303030;
   --header: #2ECC71; /* Emerald Green */
   --text: #c9d1d9; /* Light Silver */
   --blue: #58a6ff; /* Blue */

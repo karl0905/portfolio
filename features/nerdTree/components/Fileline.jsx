@@ -83,7 +83,7 @@ export function Fileline({
                 ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
                     onClick={() => handleMenuClick(item, route)}
                   >
-                    <p className='text-md'>{item.name}</p>
+                    <p className='text-md'>{item?.icon} {item.name}</p>
                     {title === "experience" && (
                       <>
                         <p className='text-md text-[var(--orange)]'>@</p>

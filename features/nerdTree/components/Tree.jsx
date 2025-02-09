@@ -74,7 +74,7 @@ export function Tree() {
       {
         <div
           className={`overflow-y-auto overflow-x-none lg:flex flex-col px-4 min-w-[22rem] 
-              bg-transparent border-r-2 border-gray-400 
+              bg-transparent border-r-2 border-gray-400
               ${isOpen ? "flex" : "hidden"}`}>
           {treeContent.map((item, index) => (
             <Fileline

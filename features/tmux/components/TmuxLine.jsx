@@ -35,7 +35,7 @@ export function TmuxLine() {
   const route = usePathname();
   const [currentSite, setCurrentSite] = useState(route);
   return (
-    <div className='h-fit flex gap-2 bg-[#303030] no-select'>
+    <div className='h-fit flex gap-2 bg-[var(--lightGrey)] no-select'>
       <StatusTab title={statusTab.title} icon={statusTab.icon} />
       {
         tabs.map((item, index) => (
