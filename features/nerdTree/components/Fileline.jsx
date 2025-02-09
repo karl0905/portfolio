@@ -79,7 +79,7 @@ export function Fileline({
                 {content.data.map((item, index) => (
                   <div
                     key={index}
-                    className={`w-full cursor-pointer flex gap-4 whitespace-nowrap
+                    className={`w-full cursor-pointer flex gap-2 whitespace-nowrap
                 ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
                     onClick={() => handleMenuClick(item, route)}
                   >

@@ -27,6 +27,7 @@ export function Folder({
           route={route}
           content={content}
           onClick={onClick}
+          title={title}
         />
       )}
     </div>
