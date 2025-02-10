@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "type": "projects",
+      "name": "RESBOOK",
+      "title": "RESBOOK",
+      "date": "December 2024",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/karl0905/RESBOOK"
+        },
+        {
+          "title": "Live",
+          "url": "https://resbook.vercel.app/"
+        }
+      ],
+      "images": [
+        {
+          "src": "/resbook/resbook_phone.png",
+          "alt": "RESBOOK phone render"
+        },
+        {
+          "src": "/resbook/resbook_tablet.png",
+          "alt": "RESBOOK tablet render"
+        },
+        {
+          "src": "/resbook/resbook_screenshot.png",
+          "alt": "RESBOOK landing page screenshot"
+        }
+      ],
+      "content": [
+        "RESBOOK is {{finals project}} deveolop by me and my team. The project is a {{booking system}} for restaurants, where the user can book a table at a restaurant and the restaurant can manage their bookings.",
+        "The project consists of two frontends, one for the user, built in {{Next.js}} and one for the restaurant, built in {{React}}. The backend is built in {{Remix}} and uses a {{MySQL}} database to store the data.",
+        "The development was managed with {{GitHub Projects}}, taking advantage of {{feature branches}} and {{pull requests}} to ensure a smooth development process.",
+        "The frontends are deployed on {{Vercel}} and the backend is deployed on a {{PHP server}}."
+      ]
+    }
+  ]
+}
