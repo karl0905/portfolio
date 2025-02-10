@@ -123,7 +123,6 @@
         "Git allows me to work on multiple features simultaneously, collaborate with team members effectively, and maintain a clean project history. <br> This has greatly improved my {{development workflow}} and {{code quality}}, and has ensured no more {{lost code}}... (whoops)",
         "If I were my {{old miata}}, Git would be my {{service log}}."
       ],
-      "snippet": "git",
       "type": "skills"
     },
     {
@@ -137,7 +136,6 @@
         "Also, using the terminal makes me feel like a {{wizard}} casting spells on my computer, impressing non-terminal users.",
         "If I were a {{surgeon}}, Zsh would be my {{scalpel}}."
       ],
-      "snippet": "zsh",
       "type": "skills"
     },
     {
@@ -150,7 +148,6 @@
         "Neovim has greatly improved my {{productivity}} and {{coding efficiency}}. <br> Its features like {{fuzzy file search}}, {{harpoon}}, and {{vim-motions}} have made coding a much more enjoyable experience for me.",
         "If I were a {{chef}}, Neovim would be my {{knife}}."
       ],
-      "snippet": "nvim",
       "type": "skills"
     }
   ]

@@ -52,7 +52,7 @@ export function Fileline({
     setContent(data);
     if (route === "skills") {
       console.log("this ran");
-      setSnippetFileType(data.snippet);
+      setSnippetFileType(data.snippet === undefined ? null : data.snippet);
       const snippet = await fetchSnippet(data.snippet);
       setSnippet(snippet);
     } else {

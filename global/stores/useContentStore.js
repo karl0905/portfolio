@@ -11,8 +11,8 @@ export const useContentStore = create((set) => ({
   clearContent: () => set({ mainContent: {} }),
 
   setSnippet: (newSnippet) => set({ snippet: newSnippet }),
-  clearSnippet: () => set({ snippet: "" }),
+  clearSnippet: () => set({ snippet: null }),
 
   setSnippetFileType: (newSnippetFileType) => set({ snippetFileType: newSnippetFileType }),
-  clearSnippetFileType: () => set({ snippetFileType: "" })
+  clearSnippetFileType: () => set({ snippetFileType: null })
 }));
