@@ -20,8 +20,8 @@ export function TerminalController() {
   const [currentInput, setCurrentInput] = useState('');
 
   useEffect(() => {
-    clearTerminal();
-  }, [mediaQuery]);
+    console.log("mediaquery", mediaQuery)
+  }, [mediaQuery])
 
   useEffect(() => {
     if (terminalLineData.length === 0) {
@@ -85,7 +85,7 @@ export function TerminalController() {
     cat: (args) => {
       if (args.length === 0) {
         return (
-          <span style={{ color: 'red' }}>
+          <span key='cat-error' style={{ color: 'red' }}>
             cat: missing file operand
           </span>
         )
@@ -94,7 +94,7 @@ export function TerminalController() {
         const file = current_dir.find((file) => file.name === arg);
         if (!file) {
           return (
-            <span style={{ color: 'red' }}>
+            <span key={`cat-error${args}`} style={{ color: 'red' }}>
               cat: {arg}: No such file or directory
             </span>
           )
@@ -105,11 +105,15 @@ export function TerminalController() {
       return output.trim();
     },
     default: (input) => {
-      return (
-        <span style={{ color: 'red' }}>
-          zsh: command not found: {input}
-        </span>
-      );
+      if (input.length > 0) {
+        return (
+          <span key={`error-${input}`} style={{ color: 'red' }}>
+            zsh: command not found: {input}
+          </span>
+        );
+      } else {
+        return;
+      }
     }
   };
 
@@ -130,12 +134,19 @@ export function TerminalController() {
 
   // Function to add output to terminal
   const addOutput = (input, output) => {
+    // Generate unique keys using timestamp
+    const timeNow = Date.now();
+
     // Sanitize output before rendering it
     const sanitizedOutput = typeof output === 'string' ? DOMPurify.sanitize(output) : output;
 
-    addTerminalLine(<TerminalOutput>{`$ ${input}`}</TerminalOutput>);
+    addTerminalLine(
+      <TerminalOutput key={`input-${timeNow}`}>{`$ ${input}`}</TerminalOutput>
+    );
     if (sanitizedOutput) {
-      addTerminalLine(<TerminalOutput>{sanitizedOutput}</TerminalOutput>);
+      addTerminalLine(
+        <TerminalOutput key={`output-${timeNow}`}>{sanitizedOutput}</TerminalOutput>
+      );
     }
   };
 
