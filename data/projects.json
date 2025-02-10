@@ -30,7 +30,7 @@
         }
       ],
       "content": [
-        "RESBOOK is {{finals project}} deveolop by me and my team. The project is a {{booking system}} for restaurants, where the user can book a table at a restaurant and the restaurant can manage their bookings.",
+        "RESBOOK is my {{finals project}} at {{Business Academy Aarhus}} developed by me and my team. The project is a {{booking system}} for restaurants, where the user can book a table at a restaurant and the restaurant can manage their bookings.",
         "The project consists of two frontends, one for the user, built in {{Next.js}} and one for the restaurant, built in {{React}}. The backend is built in {{Remix}} and uses a {{MySQL}} database to store the data.",
         "The development was managed with {{GitHub Projects}}, taking advantage of {{feature branches}} and {{pull requests}} to ensure a smooth development process.",
         "The frontends are deployed on {{Vercel}} and the backend is deployed on a {{PHP server}}."
