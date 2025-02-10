@@ -21,8 +21,7 @@ export function Lualine() {
 
   return (
     <div className='w-[calc(100%+2rem)] fixed bottom-0 flex flex-col -mx-4 '>
-      <div className='h-5 bg-[var(--lightGrey)] flex 
-    items-center text-[var(--text)]'>
+      <div className='h-5 bg-[var(--lightGrey)] flex items-center text-[var(--text)]'>
         <LualineDir
           currentDir={currentDir}
         />

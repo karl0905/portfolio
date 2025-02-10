@@ -15,11 +15,11 @@ export function MainContent({ children }) {
 
   return (
     <div className={` flex flex-col px-4 pt-10 overflow-y-auto w-full grow gap-8 `}>
-      <div className='max-w-[1200px] pb-4'>
+      <div className='max-w-[1200px] pb-16'>
         {mainContent?.name === "home.jsx" && (
           <div className={`flex gap-12 flex-wrap mb-8 items-center`}>
-            <pre className='text-[0.8px]/[3px] tracking-[1.2px] '>{karl}</pre>
-            <pre className='hidden lg:flex text-[9px]/[9px] tracking-[0.3px]'>{figlet}</pre>
+            <pre className='text-[1px]/[3px] tracking-[1.2px] text-white'>{karl}</pre>
+            <pre className='hidden desktop:flex text-[9px]/[9px] tracking-[0.3px]'>{figlet}</pre>
           </div>
         )}
         {(mainContent.type === "project" || mainContent.type === "experience") && (
