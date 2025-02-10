@@ -74,13 +74,13 @@ export function Fileline({
           : type === 'file'
             ? (
               <
-                div className="ml-6"
+                div className=""
                 onClick={onClick}
               >
                 {content.data.map((item, index) => (
                   <div
                     key={index}
-                    className={`w-full cursor-pointer flex gap-2 whitespace-nowrap
+                    className={`w-full cursor-pointer flex gap-2 whitespace-nowrap pl-8
                 ${selectedMenuItem?.name === item.name ? 'bg-[#303030]' : 'hover:bg-[#303030]'}`}
                     onClick={() => handleMenuClick(item, route)}
                   >
