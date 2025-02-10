@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 export function useMediaQuery() {
-  const [mediaQuery, setMediaQuery] = useState('desktop'); // Default to desktop
+  const [mediaQuery, setMediaQuery] = useState(); // Default to desktop
 
   const updateMediaQuery = () => {
     if (window.innerWidth <= 470) {

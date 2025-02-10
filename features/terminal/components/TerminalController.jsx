@@ -20,18 +20,15 @@ export function TerminalController() {
   const [currentInput, setCurrentInput] = useState('');
 
   useEffect(() => {
-    console.log("mediaquery", mediaQuery)
-  }, [mediaQuery])
-
-  useEffect(() => {
-    if (terminalLineData.length === 0) {
+    if (mediaQuery && terminalLineData.length === 0) {
       const asciiArt =
         <pre className='text-[8px]/[10px] tracking-[1px] '>
           {figlet}
         </pre>
 
       const lines = [
-        (mediaQuery === 'desktop' || mediaQuery === 'tablet') ? <TerminalOutput key="asciiArt">{asciiArt}</TerminalOutput> : null,
+        (mediaQuery === 'desktop' || mediaQuery === 'tablet') ?
+          <TerminalOutput key="asciiArt">{asciiArt}</TerminalOutput> : null,
         <TerminalOutput key="welcome1">Welcome to the Karl terminal</TerminalOutput>,
         <TerminalOutput key="welcome2">Type a command to get started</TerminalOutput>,
         <TerminalOutput key="welcome3">Here are a few suggestions:</TerminalOutput>,
@@ -39,7 +36,7 @@ export function TerminalController() {
         <TerminalOutput key="suggestion2"><strong>hello</strong> --to greet the terminal</TerminalOutput>,
         <TerminalOutput className="whitespace-normal" key="suggestion3"><strong>ls</strong> --to list directory contents</TerminalOutput>,
         <TerminalOutput className="whitespace-normal" key="suggestion4"><strong>cat</strong> --to concatenate files and print the standard output</TerminalOutput>,
-      ];
+      ].filter(Boolean);
 
       setTerminalLineData(lines);
     }
@@ -78,7 +75,7 @@ export function TerminalController() {
       // Join the arguments to form the echoed string
       return args.join(' ');
     },
-    help: () => 'Available commands: hello, date, clear, echo, ls, cat',
+    help: () => `Available commands: ${Object.keys(commands).join(', ')}`,
     ls: () => {
       return current_dir.map((file) => file.name).join(' ');
     },
