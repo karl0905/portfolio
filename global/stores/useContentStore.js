@@ -5,7 +5,8 @@ const startdata = readmeData.data[0];
 
 export const useContentStore = create((set) => ({
   mainContent: startdata,
-  snippet: "",
+  snippet: null,
+  snippetFileType: null,
 
   setContent: (newContent) => set({ mainContent: newContent }),
   clearContent: () => set({ mainContent: {} }),
