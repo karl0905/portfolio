@@ -46,6 +46,7 @@ export function Fileline({
   }
 
   const handleMenuClick = async (item, route) => {
+    clearSnippet();
     setSelectedMenuItem(item);
     const data = await fetchData(item.name, route);
     setContent(data);
