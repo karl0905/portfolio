@@ -75,7 +75,12 @@ export function TerminalController() {
       // Join the arguments to form the echoed string
       return args.join(' ');
     },
-    help: () => `Available commands: ${Object.keys(commands).join(', ')}`,
+    help: () => {
+      const allCommands = Object.keys(commands)
+        .filter((command) => command !== 'default')
+        .join(', ');
+      return (`Available commands: ${allCommands}`)
+    },
     ls: () => {
       return current_dir.map((file) => file.name).join(' ');
     },
@@ -91,7 +96,7 @@ export function TerminalController() {
         const file = current_dir.find((file) => file.name === arg);
         if (!file) {
           return (
-            <span key={`cat-error${args}`} style={{ color: 'red' }}>
+            <span key={`cat - error${args} `} style={{ color: 'red' }}>
               cat: {arg}: No such file or directory
             </span>
           )
@@ -104,7 +109,7 @@ export function TerminalController() {
     default: (input) => {
       if (input.length > 0) {
         return (
-          <span key={`error-${input}`} style={{ color: 'red' }}>
+          <span key={`error - ${input} `} style={{ color: 'red' }}>
             zsh: command not found: {input}
           </span>
         );
@@ -138,11 +143,11 @@ export function TerminalController() {
     const sanitizedOutput = typeof output === 'string' ? DOMPurify.sanitize(output) : output;
 
     addTerminalLine(
-      <TerminalOutput key={`input-${timeNow}`}>{`$ ${input}`}</TerminalOutput>
+      <TerminalOutput key={`input - ${timeNow} `}>{`$ ${input} `}</TerminalOutput>
     );
     if (sanitizedOutput) {
       addTerminalLine(
-        <TerminalOutput key={`output-${timeNow}`}>{sanitizedOutput}</TerminalOutput>
+        <TerminalOutput key={`output - ${timeNow} `}>{sanitizedOutput}</TerminalOutput>
       );
     }
   };
