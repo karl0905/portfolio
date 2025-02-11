@@ -32,15 +32,24 @@ export function MainContent({ children }) {
           </div>
         )}
         {(isProject || isExperience) && (
-          <div className='pb-6'>
+          <div className='pb-4'>
             <h1
               dangerouslySetInnerHTML={{ __html: colorizeString(`{{` + mainContent.title + `}}`) }}
             />
             <p
               dangerouslySetInnerHTML={{ __html: colorizeString(`{{` + mainContent.date + `}}`) }}
             />
+            {mainContent?.tech && (
+              <div className='flex flex-row gap-3 text-sm pt-4 '>
+                {mainContent.tech.map((tech, index) => (
+                  <span key={index}
+                    dangerouslySetInnerHTML={{ __html: colorizeString('{{' + tech + '}}') }}
+                  />
+                ))}
+              </div>
+            )}
             {isProject && (
-              <div className='flex gap-12 p-8'>
+              <div className='flex gap-12 pt-4'>
                 {mainContent.links.map((link, index) => (
                   <ProjectButton
                     key={index}
