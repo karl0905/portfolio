@@ -40,7 +40,7 @@ export function MainContent({ children }) {
               dangerouslySetInnerHTML={{ __html: colorizeString(`{{` + mainContent.date + `}}`) }}
             />
             {mainContent?.tech && (
-              <div className='flex flex-row gap-3 text-sm pt-1'>
+              <div className='flex flex-row gap-3'>
                 {mainContent.tech.map((tech, index) => (
                   <span key={index}
                     dangerouslySetInnerHTML={{ __html: colorizeString('{{' + tech + '}}') }}

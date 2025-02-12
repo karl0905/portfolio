@@ -5,12 +5,18 @@
       "name": "Frontend Developer",
       "company": "Cernel.ai",
       "date": "Jan 2024 - Jun 2024",
-      "title": "Frontend Developer & Intern (React, Next.js, Tailwind, Figma)",
+      "title": "Frontend Developer & Intern",
       "content": [
         "As part of my education at {{Erhversakademi Aarhus}} I worked at an internship at Cernel.ai, where i worked as a {{frontend developer}} alongside another frontend developer and a bunch of very talented backend engineers.",
         "I worked on the frontend of the Cernel.ai platform, which is a platform that allows E-Commerce companies to instantly generate {{AI generated product descriptions}}, titles and other SEO fields for their products and categories.",
         "I worked primarily with {{React}} and {{Next}} when developing and implementing new features, such as {{Stripe integration}}, {{new onboarding flows}} and a {{big customization feature}} that allows users to customize the {{AI generated content}}.",
         "As Cernel is a {{startup}}, I also had the opportunity to work on the {{UX}} and {{Design}} part of the implementation, where I worked with Figma to design new features and improvements to the platform."
+      ],
+      "tech": [
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Figma"
       ]
     }
   ]
