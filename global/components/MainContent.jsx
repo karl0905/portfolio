@@ -33,7 +33,7 @@ export function MainContent({ children }) {
         )}
         {(isProject || isExperience) && (
           <div className='pb-4'>
-            <h1
+            <h1 className='text-2xl font-bold'
               dangerouslySetInnerHTML={{ __html: colorizeString(`{{` + mainContent.title + `}}`) }}
             />
             <p
