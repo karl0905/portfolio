@@ -30,7 +30,7 @@
         }
       ],
       "content": [
-        "RESBOOK is my {{finals project}} at {{Business Academy Aarhus}} developed by me and my team. The project is a {{booking system}} for restaurants, where the user can book a table at a restaurant and the restaurant can manage their bookings. <br> <br> The authentication, is the most noteworthy part of the project, taking advantage of next.js middleware and built from scratch using a combination of {{JWT}} and {{session tokens}}.",
+        "RESBOOK is my {{finals project}} at {{Business Academy Aarhus}} developed by me and my team. The project is a {{booking system}} for restaurants, where the user can book a table at a restaurant and the restaurant can manage their bookings. <br> <br> The authentication, is the most noteworthy part of the project, taking advantage of next.js middleware and built from scratch using a combination of {{JWT}} and {{session tokens}}. (See the code on GitHub for more details)",
         "The project consists of two frontends, one for the user, built in {{Next.js}} and one for the restaurant, built in {{React}}. The backend is built in {{Remix}} and uses a {{MySQL}} database to store the data.",
         "The development was managed with {{GitHub Projects}}, taking advantage of {{feature branches}} and {{pull requests}} to ensure a smooth development process.",
         "The frontends are deployed on {{Vercel}} and the backend is deployed on a {{PHP server}}."
@@ -41,6 +41,40 @@
         "MySQL",
         "PHP",
         "Vercel"
+      ]
+    },
+    {
+      "type": "projects",
+      "name": "Discord Bot",
+      "title": "Discord Bot",
+      "date": "Jun 2024",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/karl0905/discordBot"
+        }
+      ],
+      "images": [
+        {
+          "src": "/discordBot/pi_htop.png",
+          "alt": "Screenshot of the bot running on the Raspberry Pi"
+        },
+        {
+          "src": "/discordBot/discordBot.png",
+          "alt": "Discord Bot screenshot"
+        }
+      ],
+      "content": [
+        "This Discord Bot is a {{personal project}} that I developed to learn more about, and getting more comfortable, with {{Node.js}} and backend in general. <br> <br> The bot is hosted on my {{Raspberry Pi}} and is running 24/7, checking if a friend has played a new League of Legends game, using a {{Cron job}}, and {{posting}} the result, including {{stats}}, in a Discord channel using {{discord.js}}.",
+        "The bot is built with {{Node.js}} and uses the {{Riot API}} to get the game data. As mentioned, the bot is using {{Cron}} to check for new games every 5 minutes.",
+        ""
+      ],
+      "tech": [
+        "Node.js",
+        "Cron",
+        "API",
+        "Discord.js",
+        "Raspberry Pi"
       ]
     }
   ]
