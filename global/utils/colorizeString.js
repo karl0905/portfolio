@@ -5,9 +5,9 @@ import {
 export function colorizeString(str) {
   const links = [];
   
-  // First handle the links - convert [[text|url]] to placeholders
+  // handle links - convert [[text|url]] to placeholders
   const withPlaceholders = str.replace(/\[\[(.*?)\|(.*?)\]\]/g, (match, text, url) => {
-    // Store the link info and a random color class for each link
+    // Store link info and random color class for link
     links.push({ 
       text, 
       url,
@@ -16,7 +16,7 @@ export function colorizeString(str) {
     return `###LINK${links.length - 1}###`;
   });
 
-  // Then do the normal color spans
+  // Replace color placeholders with colored spans
   const withColors = withPlaceholders
     .replaceAll("{{", () => `<span class="${getRandomTextColorClass()}">`)
     .replaceAll("}}", "</span>");
@@ -27,3 +27,7 @@ export function colorizeString(str) {
     return `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="${link.colorClass} hover:opacity-80 transition-colors duration-200 underline">${link.text}</a>`;
   });
 }
+
+
+
+
