@@ -27,7 +27,3 @@ export function colorizeString(str) {
     return `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="${link.colorClass} hover:opacity-80 transition-colors duration-200 underline">${link.text}</a>`;
   });
 }
-
-
-
-
