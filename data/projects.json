@@ -76,6 +76,38 @@
         "Discord.js",
         "Raspberry Pi"
       ]
+    },
+    {
+      "type": "projects",
+      "name": "Personal portfolio",
+      "title": "Personal portfolio",
+      "date": "Feb 2025",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/karl0905/portfolio"
+        }
+      ],
+      "images": [
+        {
+          "src": "/portfolio/landing_page.png",
+          "alt": "Landing page of the Portfolio"
+        },
+        {
+          "src": "/portfolio/colorize_string.png",
+          "alt": "Colorize function of the Portfolio"
+        }
+      ],
+      "content": [
+        "This {{portfolio}} you're currently exploring is a personal project that I developed to showcase my {{skills}} and {{interests}} in development, particularly my growing interest in {{backend technologies}}. <br> <br> I've built this portfolio to reflect how I {{actually work}} - in the {{terminal}}, with tools like Neovim and Tmux. It's not just about {{pretty interfaces}}; I enjoy diving into system {{architecture}} and {{structure}}. Working in the terminal gives me a deeper understanding of how things are {{connected}} under the surface.",
+        "The content is stored in a {{JSON}} file for easy maintenance, then fetched and ran through a {{Colorize function}} to add one of three colors to the highlightet words. {{Just}} {{like}} {{this}}."
+      ],
+      "tech": [
+        "Next.js",
+        "Tailwind",
+        "Node.js",
+        "CSS"
+      ]
     }
   ]
 }
