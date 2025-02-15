@@ -70,7 +70,7 @@ export function MainContent({ children }) {
                   dangerouslySetInnerHTML={{ __html: colorizeString(str) }}
                 />
                 {mainContent.images?.[index] && (
-                  <div className='relative w-96 h-80 border border-[var(--text)]'>
+                  <div className='relative max-w-[35rem] min-w-96 h-80 border border-[var(--text)]'>
                     <Image
                       src={mainContent.images[index].src}
                       alt={mainContent.images[index].alt}
