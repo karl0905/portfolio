@@ -38,6 +38,7 @@ export function Fileline({
         return matchedItem;
       } else {
         console.log("no matchedItem with name", name);
+    console.log("content", mainContent)
         return null;
       }
     } catch (error) {
@@ -51,7 +52,6 @@ export function Fileline({
     const data = await fetchData(item.name, route);
     setContent(data);
     if (route === "skills") {
-      console.log("this ran");
       setSnippetFileType(data.snippet === undefined ? null : data.snippet);
       const snippet = await fetchSnippet(data.snippet);
       setSnippet(snippet);
@@ -59,7 +59,6 @@ export function Fileline({
       clearSnippet();
       clearSnippetFileType();
     }
-    console.log("content", mainContent)
   };
 
   return (

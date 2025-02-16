@@ -34,6 +34,7 @@ export function Lualine() {
         <div className='flex gap-3 items-center'>
           {links.map((link, index) => (
             <p
+              key={index}
               className='text-sm'
               target='_blank'
               rel='noopener noreferrer'

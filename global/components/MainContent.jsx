@@ -18,10 +18,6 @@ export function MainContent({ children }) {
   const isExperience = mainContent?.type === "experience";
   const isHome = mainContent?.name === "home.jsx";
 
-  useEffect(() => {
-    console.log("snippet state", snippetFileType);
-  }, [snippet, snippetFileType, mainContent]);
-
   return (
     <div className={` flex flex-col px-4 pt-10 overflow-y-auto w-full grow gap-8 `}>
       <div className='max-w-[1200px] pb-16'>
@@ -74,9 +70,8 @@ export function MainContent({ children }) {
                     <Image
                       src={mainContent.images[index].src}
                       alt={mainContent.images[index].alt}
-                      layout="fill"
-                      objectFit="contain"
-                      className='p-4'
+                      fill
+                      className='p-4 object-contain'
                     />
                   </div>
                 )}
