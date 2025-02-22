@@ -70,7 +70,7 @@
         "Node.js is a {{JavaScript runtime}} built on Chrome's V8 engine, enabling {{server-side execution}} of JavaScript for fast and {{scalable}} network applications.",
         "I have been working with Node.js for over {{2 years}}, developing everything from small {{APIs}} to real-time programs with {{cron-jobs}}. Its {{event-driven}}, {{non-blocking I/O model}} has made it my preferred choice for building efficient web applications. Node.js fascinates me due to its ability to use {{JavaScript}} on the {{backend}} (even thought thats a bit illegal... ;) )",
         "My experience includes creating {{RESTful APIs}}, implementing {{real-time features}}, and integrating various {{databases}}. This has significantly improved my {{full-stack development}} skills and deepened my understanding of {{asynchronous programming}}.",
-        "If I were a {{chef}}, Node.js would be my {{Swiss Army knife}} - good at everything, great at nothing."
+        "If I were a {{boy scout}}, Node.js would be my {{Swiss Army knife}} - good at everything, great at nothing."
       ],
       "snippet": "njs",
       "type": "skills"
