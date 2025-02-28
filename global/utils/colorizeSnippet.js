@@ -11,6 +11,7 @@ export function colorizeSnippet(text, language) {
     php: phpKeywords,
     mysql: mysqlKeywords,
     tw: tailwindKeywords,
+    ts: typescriptKeywords,
   }[language];
 
   if (!keywords) {
@@ -84,6 +85,13 @@ const javascriptKeywords = [
   ["function", "export", "return", "const", "let", "if", "while"],
   ["forEach", "RegExp", "push", "sort", "slice", "join", "escapeHtml", "text", "language", "COLORS"]
 ];
+
+const typescriptKeywords = [
+  ["Request", "Response", "IContact", "string", "undefined", "void", "Promise"],
+  ["import", "export", "const", "let", "async", "await", "try", "catch", "if"],
+  ["contactController", "searchContacts", "Contact", "find", "json", "status", "console", "error", "req", "res"]
+];
+
 
 const reactKeywords = [
   ["useContentStore", "MainContent", "colorizeString", "colorizeSnippet"],

@@ -37,6 +37,18 @@
       "type": "skills"
     },
     {
+      "name": "TypeScript",
+      "icon": "",
+      "content": [
+        "TypeScript is like {{JavaScript}} with superpowers, adding {{type safety}} and better tooling to the language we all know and love.",
+        "I've been working with TypeScript for about {{a year}}, and it has completely changed how I approach coding. It helps me catch bugs early and ensures my code is more {{predictable}} and {{maintainable}}.",
+        "What I love most about TypeScript is how it makes JavaScript's quirks more manageable. With features like {{interfaces}}, {{enums}}, and {{type inference}}, I can write cleaner, more reliable code without losing flexibility.",
+        "Writing {{type safe}} code has become a natural part of my workflow, and is something I can't built without anymore."
+      ],
+      "snippet": "ts",
+      "type": "skills"
+    },
+    {
       "name": "React",
       "icon": "",
       "content": [
@@ -98,6 +110,19 @@
         "If I were a {{switch}}, PHP would be my {{ethernet port}}."
       ],
       "snippet": "php",
+      "type": "skills"
+    },
+    {
+      "name": "Docker",
+      "icon": "",
+      "content": [
+        "Docker is a super handy {{containerization}} tool that fits my approach to building software, including fullstack applications. It lets me deploy the frontend and backend in {{separate}} containers, keeping everything neat and organized.",
+        "I've only recently started using Docker, and it really resonates with my focus on {{encapsulation}} and a solid, well-defined {{structure}}.",
+        "This setup makes it easier to manage dependencies and {{scale projects}} without the usual hassle.",
+        "I enjoy how Docker breaks down my application into {{manageable parts}}, ensuring each component operates smoothly on its own.",
+        "In short, Docker has become my go-to toolkit for creating {{clean}}, {{efficient}}, and {{containerized applications}}.",
+        "It has also allowed me to explore {{VPS hosting}} and {{CI/CD pipelines}}, which has been a great learning experience."
+      ],
       "type": "skills"
     },
     {
