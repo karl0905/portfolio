@@ -88,6 +88,19 @@
       "type": "skills"
     },
     {
+      "name": "Django Rest Framework",
+      "icon": "",
+      "content": [
+        "Django Rest Framework (DRF) is a powerful {{toolkit}} for building {{Web APIs}} with Django. <br> It provides {{serialization}}, {{authentication systems}}, and {{viewsets}} that dramatically simplify RESTful service creation.",
+        "I have been using Django Rest Framework {{shortly}}, but have already implemented several {{API endpoints}} and custom {{permission classes}}. <br> Its intuitive design has allowed me to rapidly develop robust backend services.",
+        "My experience includes creating {{class models}}, implementing {{class-based views}}, setting up {{token authentication}}, and utilizing {{resource-based routing}}. <br> This has enhanced my understanding of {{REST architecture}} and API design principles.",
+        "I'm particularly intrigued by the {{modular structure}} of DRF that allows for easy customization, and seperation of concerns. This way of creating structure resonates with me and my way of thinking.",
+        "I'm currently working on a big project with Django Rest Framework as the API and backend, with Postgres as the database and Next.js as the frontend. We're using Docker to containerize the application, working towards an MVP."
+      ],
+      "snippet": "drf",
+      "type": "skills"
+    },
+    {
       "name": "Tailwind",
       "icon": "󱏿",
       "content": [
@@ -123,6 +136,7 @@
         "In short, Docker has become my go-to toolkit for creating {{clean}}, {{efficient}}, and {{containerized applications}}.",
         "It has also allowed me to explore {{VPS hosting}} and {{CI/CD pipelines}}, which has been a great learning experience."
       ],
+      "snippet": "docker",
       "type": "skills"
     },
     {
@@ -136,6 +150,17 @@
         "If I were a {{Counter-Strike player}}, MySQL would be my {{inventory}}."
       ],
       "snippet": "mysql",
+      "type": "skills"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "",
+      "content": [
+        "MongoDB is a {{document-oriented}} NoSQL database that excels at storing {{unstructured data}}. <br> It offers great {{flexibility}}, {{horizontal scaling}}, and {{high-performance}} querying through its JSON-like document model.",
+        "I have been using MongoDB for {{half a year}}, implementing solutions from simple {{post apps}} to {{chatlogs for LLM apps}}. <br> Its schema-less design has proven invaluable for rapidly evolving application requirements. Even though i prefer a schemaet database, MongoDB has been a great introduction to NoSQL databases.",
+        "My experience includes designing {{document schemas}} with mongoose, and implementing {{referencing}} and {{embedding}}. <br> This has deepened my understanding of {{non-relational data modeling}} and modern distributed database architectures."
+      ],
+      "snippet": "mongo",
       "type": "skills"
     },
     {

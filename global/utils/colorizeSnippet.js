@@ -12,6 +12,9 @@ export function colorizeSnippet(text, language) {
     mysql: mysqlKeywords,
     tw: tailwindKeywords,
     ts: typescriptKeywords,
+    docker: dockerKeywords,
+    mongo: mongoKeywords,
+    drf: drfKeywords
   }[language];
 
   if (!keywords) {
@@ -68,11 +71,11 @@ const cssKeywords = [
   ["background", "font-family", "text-wrap", "font-size", "font-weight", "color", "user-select"]
 ];
 
-const gitKeywords = [
-  ["commit", "branch", "merge", "pull", "push", "remote", "origin", "master", "main"],
-  ["add", "status", "log", "diff", "checkout", "reset", "rebase", "fetch", "clone"],
-  ["--hard", "--soft", "--global", "--amend", "-m", "-b"]
-];
+// const gitKeywords = [
+//   ["commit", "branch", "merge", "pull", "push", "remote", "origin", "master", "main"],
+//   ["add", "status", "log", "diff", "checkout", "reset", "rebase", "fetch", "clone"],
+//   ["--hard", "--soft", "--global", "--amend", "-m", "-b"]
+// ];
 
 const htmlKeywords = [
   [],
@@ -124,8 +127,26 @@ const phpKeywords = [
   ["\\$", "->", "\\$mySQL", "\\$headers", "\\$authHeader", "\\$bearerToken", "\\$sql", "\\$result", "\\$currentDateTime", "\\$accessTokenExpiry", "user_id", "access_token_expiry", "401", "1", "\\$matches"]
 ];
 
+const dockerKeywords = [
+  ["FROM", "AS", "COPY", "RUN", "CMD", "EXPOSE", "WORKDIR", "ENV", "ARG", "VOLUME", "USER", "ENTRYPOINT", "LABEL", "HEALTHCHECK", "ONBUILD"],
+  ["npm", "nextjs"],
+  ["3000", "ci"]
+];
+
 const mysqlKeywords = [
   [],
   ["SELECT", "AS", "FROM", "INNER JOIN", "LEFT JOIN", "ON", "GROUP BY", "HAVING", "LIMIT", "COUNT"],
   ["9000", "42"]
+];
+
+const mongoKeywords = [
+  ["const", "require", "new", "mongoose", "Schema", "model", "module", "exports"],
+  ["String", "Date"],
+  ["name", "title", "email", "phone", "location", "summary", "category", "items", "description", "technologies", "imageUrl", "projectUrl", "githubUrl", "company", "position", "startDate", "endDate", "achievements", "institution", "degree", "field", "graduationDate", "issuer", "url", "date"]
+];
+
+const drfKeywords = [
+  ["return", "class", "if", "else", "elif", "try", "except", "for", "in", "and", "or", "not", "is", "None", "True", "False", "index", "detail", "results", "vote"],
+  ["HttpResponse", "render", "APIView", "Response", "status", "serializers", "viewsets", "routers", "permissions", "authentication", "def"],
+  ["request", "response", "self", "pk", "queryset", "serializer_class", "permission_classes", "authentication_classes", "lookup_field", "context", "data", "validated_data", "question_id"]
 ];
