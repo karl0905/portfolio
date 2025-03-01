@@ -56,7 +56,7 @@
         "React is {{declarative}} because it allows you to describe the desired outcome and React will take care of the rest. <br> React is {{component-based}} because it allows you to break down your user interface into {{small}} and {{reusable}} components, making your code more {{modular}} and {{maintainable}}. <br> React is {{unidirectional}} because data flows in a {{single}} direction, making it easier to understand and debug.",
         "I have been working with React for {{2 years}}, utilizing its capabilities to build {{scalable}} and {{efficient}} front-end solutions. <br> From {{single-page applications}} to internal {{enterprise systems}}, React has been my preferred choice.",
         "My expertise includes harnessing {{hooks}}, and crafting {{custom hooks}} for effective state management. I have also explored {{server-side rendering}} with Next.js. <br> I have developed {{reusable component libraries}}, managed complex {{application state}}, and designed {{responsive layouts}} that adapt seamlessly to various devices.",
-        "The main reason I enjoy React, is because of the {{well structured}} code it allows you to write. It gives a great {{understanding}} of how to code in a {{modular}} and {{scalable}} way. <br> This for me is both {{rewarding}} and {{satisfying}}.",
+        "The main reason I enjoy React, is because of the {{well structured}} code it allows you to write. It gives a great {{understanding}} of how to code in a {{modular}} and {{scalable}} way.",
         "If I were a {{keyboard}}, React would be my {{hotswappable switches}}."
       ],
       "snippet": "jsx",
@@ -92,10 +92,10 @@
       "icon": "",
       "content": [
         "Django Rest Framework (DRF) is a powerful {{toolkit}} for building {{Web APIs}} with Django. <br> It provides {{serialization}}, {{authentication systems}}, and {{viewsets}} that dramatically simplify RESTful service creation.",
-        "I have been using Django Rest Framework {{shortly}}, but have already implemented several {{API endpoints}} and custom {{permission classes}}. <br> Its intuitive design has allowed me to rapidly develop robust backend services.",
+        "I have been using Django Rest Framework {{shortly}}, but have already implemented several {{API endpoints}} and custom {{permission classes}}.",
         "My experience includes creating {{class models}}, implementing {{class-based views}}, setting up {{token authentication}}, and utilizing {{resource-based routing}}. <br> This has enhanced my understanding of {{REST architecture}} and API design principles.",
         "I'm particularly intrigued by the {{modular structure}} of DRF that allows for easy customization, and seperation of concerns. This way of creating structure resonates with me and my way of thinking.",
-        "I'm currently working on a big project with Django Rest Framework as the API and backend, with Postgres as the database and Next.js as the frontend. We're using Docker to containerize the application, working towards an MVP."
+        "I'm currently working on a big project with Django Rest Framework as the {{API and backend}}, with {{Postgres}} as the database and {{Next.js}} as the frontend. We're using {{Docker}} to containerize the application, working towards an {{MVP}}."
       ],
       "snippet": "drf",
       "type": "skills"
@@ -130,9 +130,7 @@
       "icon": "",
       "content": [
         "Docker is a super handy {{containerization}} tool that fits my approach to building software, including fullstack applications. It lets me deploy the frontend and backend in {{separate}} containers, keeping everything neat and organized.",
-        "I've only recently started using Docker, and it really resonates with my focus on {{encapsulation}} and a solid, well-defined {{structure}}.",
-        "This setup makes it easier to manage dependencies and {{scale projects}} without the usual hassle.",
-        "I enjoy how Docker breaks down my application into {{manageable parts}}, ensuring each component operates smoothly on its own.",
+        "I've only recently started using Docker, and it really resonates with my focus on {{encapsulation}} and a solid, well-defined {{structure}}. This setup makes it easier to manage dependencies and {{scale projects}} without the usual hassle.",
         "In short, Docker has become my go-to toolkit for creating {{clean}}, {{efficient}}, and {{containerized applications}}.",
         "It has also allowed me to explore {{VPS hosting}} and {{CI/CD pipelines}}, which has been a great learning experience."
       ],
