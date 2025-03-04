@@ -138,6 +138,18 @@
       "type": "skills"
     },
     {
+      "name": "Nginx",
+      "icon": "",
+      "content": [
+        "Nginx serves as my reliable {{reverse proxy}} solution that efficiently handles {{traffic routing}} to my VPS, ensuring visitors reach the right application every time.",
+        "I've integrated Nginx with my {{dockerized applications}}, creating a cohesive system where different projects can coexist on the same server while maintaining {{isolation}} and {{security}}. This approach significantly simplifies my hosting setup.",
+        "By pairing Nginx with {{Certbot}}, I've implemented automatic {{SSL certificate}} generation and renewal, enabling secure HTTPS connections for all my applications without manual intervention. This setup protects user data and improves {{site credibility}}.",
+        "Working with Nginx has enhanced my understanding of {{server configuration}} and {{deployment strategies}} - valuable skills that complement my development expertise."
+      ],
+      "snippet": "nginx",
+      "type": "skills"
+    },
+    {
       "name": "MySQL",
       "icon": "",
       "content": [

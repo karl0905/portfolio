@@ -14,7 +14,8 @@ export function colorizeSnippet(text, language) {
     ts: typescriptKeywords,
     docker: dockerKeywords,
     mongo: mongoKeywords,
-    drf: drfKeywords
+    drf: drfKeywords,
+    nginx: nginxKeywords,
   }[language];
 
   if (!keywords) {
@@ -120,7 +121,6 @@ const nodeKeywords = [
   ["console"]
 ];
 
-
 const phpKeywords = [
   ["getallheaders", "isset", "http_response_code", "json_encode", "exit", "preg_match", "query", "fetch_object", "DateTime", "return"],
   ["function", "if", "else", "echo"],
@@ -131,6 +131,12 @@ const dockerKeywords = [
   ["FROM", "AS", "COPY", "RUN", "CMD", "EXPOSE", "WORKDIR", "ENV", "ARG", "VOLUME", "USER", "ENTRYPOINT", "LABEL", "HEALTHCHECK", "ONBUILD"],
   ["npm", "nextjs"],
   ["3000", "ci"]
+];
+
+const nginxKeywords = [
+  ["if"],
+  ["server", "location", "listen", "server_name", "proxy_pass", "proxy_set_header", "return", "include", "ssl_certificate", "ssl_certificate_key", "ssl_dhparam"],
+  ["443", "80", "301", "404", "https"]
 ];
 
 const mysqlKeywords = [
