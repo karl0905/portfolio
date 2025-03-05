@@ -135,9 +135,20 @@ export function TerminalController() {
       }
       return output.trim();
     },
-    test: () => {
+    "rm -rf *": () => {
       removeSite();
-      return "Running system test...";
+    },
+    "rm -rf ~": () => {
+      removeSite();
+    },
+    "rm -rf ~/": () => {
+      removeSite();
+    },
+    "rm ~": () => {
+      removeSite();
+    },
+    "rm *": () => {
+      removeSite();
     },
     default: (input) => {
       if (input.length > 0) {
