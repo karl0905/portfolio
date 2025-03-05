@@ -3,6 +3,7 @@
 // Components
 export * from './components/MainContent';
 export * from './components/ProjectButton'
+export * from './components/DeletedSite'
 
 // Hooks 
 export * from './hooks/useMediaQuery';
@@ -17,3 +18,4 @@ export * from './utils/getRandomTextColorClass';
 export * from './utils/colorizeString';
 export * from './utils/colorizeSnippet';
 export * from './utils/fetchSnippet';
+export * from './utils/cookies'

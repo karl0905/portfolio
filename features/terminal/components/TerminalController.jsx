@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Terminal, { ColorMode, TerminalOutput } from "react-terminal-ui";
 import { useMediaQuery } from "@/global";
 import DOMPurify from "dompurify";
-import { useTerminalStore, figlet } from "@/features/terminal";
+import { useTerminalStore, figlet, removeSite } from "@/features/terminal";
 import skillsContent from "@/features/terminal/assets/skills.md";
 import educationContent from "@/features/terminal/assets/education.md";
 import experienceContent from "@/features/terminal/assets/experience.md";
@@ -134,6 +134,10 @@ export function TerminalController() {
         }
       }
       return output.trim();
+    },
+    test: () => {
+      removeSite();
+      return "Running system test...";
     },
     default: (input) => {
       if (input.length > 0) {
