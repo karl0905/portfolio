@@ -136,24 +136,30 @@ export function TerminalController() {
       return output.trim();
     },
     rm: (args) => {
-      if (args.length === 0) {
+      if (args.length === 0 || (args[0] === "-rf" && args.length === 1)) {
         return (
-          <span key={`no args`} style={{ color: "red" }}>
-            rm: missing operand
+          <span key="no-args" style={{ color: "red" }}>
+            rm{args[0] === "-rf" && " -rf"}: missing operand
           </span>
         );
       }
-      const fullCommand = "rm " + args.join(" ");
+
+      let fullCommand;
+      if (args[0] === "-rf") {
+        // Only consider args after "-rf" for the command
+        fullCommand = "rm -rf " + args.slice(1).join(" ");
+      } else {
+        fullCommand = "rm " + args.join(" ");
+      }
 
       const dangerousPatterns = [/rm\s+-rf\s+[~.*\/]+/, /rm\s+[~.*\/]+/];
-
       if (dangerousPatterns.some((pattern) => pattern.test(fullCommand))) {
         return removeSite();
       }
 
       return (
-        <span key={`no args`} style={{ color: "red" }}>
-          Cannot remove: {args.join(" ")} <br/>
+        <span key="rm-error" style={{ color: "red" }}>
+          Cannot remove: {args[0] === "-rf" ? args.slice(1).join(" ") : args.join(" ")} <br />
         </span>
       );
     },
