@@ -7,7 +7,7 @@ export function removeSite() {
     name: "removedSite",
     value: "true",
     options: {
-      expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+      expires: new Date(Date.now() + 2 * 60 * 1000),
     },
   });
 
