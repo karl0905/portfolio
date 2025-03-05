@@ -135,20 +135,27 @@ export function TerminalController() {
       }
       return output.trim();
     },
-    "rm -rf *": () => {
-      removeSite();
-    },
-    "rm -rf ~": () => {
-      removeSite();
-    },
-    "rm -rf ~/": () => {
-      removeSite();
-    },
-    "rm ~": () => {
-      removeSite();
-    },
-    "rm *": () => {
-      removeSite();
+    rm: (args) => {
+      if (args.length === 0) {
+        return (
+          <span key={`no args`} style={{ color: "red" }}>
+            rm: missing operand
+          </span>
+        );
+      }
+      const fullCommand = "rm " + args.join(" ");
+
+      const dangerousPatterns = [/rm\s+-rf\s+[~.*\/]+/, /rm\s+[~.*\/]+/];
+
+      if (dangerousPatterns.some((pattern) => pattern.test(fullCommand))) {
+        return removeSite();
+      }
+
+      return (
+        <span key={`no args`} style={{ color: "red" }}>
+          Cannot remove: {args.join(" ")} <br/>
+        </span>
+      );
     },
     default: (input) => {
       if (input.length > 0) {
@@ -165,33 +172,20 @@ export function TerminalController() {
 
   // Handle terminal input
   const handleInput = (input) => {
-    // Find the longest command name that matches the beginning of the input
-    const matchingCommands = Object.keys(commands)
-      .filter(
-        (cmd) =>
-          input.toLowerCase().startsWith(cmd.toLowerCase() + " ") ||
-          input.toLowerCase() === cmd.toLowerCase(),
-      )
-      .sort((a, b) => b.length - a.length); // Sort by length descending
+    const trimmedInput = input.trim();
+    const inputParts = trimmedInput.split(" ");
+    const commandName = inputParts[0].toLowerCase();
+    const args = inputParts.slice(1);
 
-    const commandName = matchingCommands[0] || input.split(" ")[0];
-    let args = [];
+    // Check if command exists, otherwise use default
+    const command = commands[commandName] || commands.default;
 
-    if (matchingCommands.length > 0) {
-      // If we found a matching command, extract arguments after the command
-      const argsString = input.substring(commandName.length).trim();
-      args = argsString ? argsString.split(" ") : [];
-    } else {
-      // Default to treating the first word as command
-      args = input.split(" ").slice(1);
-    }
+    // Execute the command with appropriate arguments
+    const output =
+      command === commands.default ? command(trimmedInput) : command(args);
 
-    const lowerCaseCommandName = commandName.toLowerCase();
-    const command = commands[lowerCaseCommandName] || commands.default;
-    const output = command(command === commands.default ? input : args);
-
-    addOutput(input, output);
-    addCommand(input);
+    addOutput(trimmedInput, output);
+    addCommand(trimmedInput);
     setCurrentInput("");
   };
 
