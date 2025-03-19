@@ -2,6 +2,64 @@
   "data": [
     {
       "type": "projects",
+      "name": "karlg.dk",
+      "title": "karlg.dk",
+      "date": "Feb 2025",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/karl0905/portfolio"
+        }
+      ],
+      "images": [
+        {
+          "src": "/portfolio/landing_page.png",
+          "alt": "Landing page of the Portfolio"
+        },
+        {
+          "src": "/portfolio/colorize_string.png",
+          "alt": "Colorize function of the Portfolio"
+        }
+      ],
+      "content": [
+        "This {{portfolio}} you're currently exploring is a personal project that I developed to showcase my {{skills}} and {{interests}} in development, particularly my growing interest in {{backend technologies}}. <br> <br> I've built this portfolio to reflect how I {{actually work}} - in the {{terminal}}, with tools like Neovim and Tmux. It's not just about {{pretty interfaces}}; I enjoy diving into system {{architecture}} and {{structure}}. Working in the terminal gives me a deeper understanding of how things are {{connected}} under the surface.",
+        "The content is stored in a {{JSON}} file for easy maintenance, then fetched and ran through a {{Colorize function}} to add one of three colors to the highlightet words. {{Just}} {{like}} {{this}}."
+      ],
+      "tech": ["Next.js", "Tailwind", "Node.js", "CSS"]
+    },
+    {
+      "type": "projects",
+      "name": "BookSpace",
+      "title": "BookSpace",
+      "date": "Mar 2025",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/karl0905/bookspace"
+        },
+        {
+          "title": "Live",
+          "url": "https://bookspace.karlg.dk"
+        }
+      ],
+      "images": [
+        {
+          "src": "/bookspace/bookspace_book.png",
+          "alt": "Book page of the book app"
+        },
+        {
+          "src": "/bookspace/bookspace_homepage.png",
+          "alt": "Homepage of the book app"
+        }
+      ],
+      "content": [
+        "BookSpace is a {{full-stack}} book management application I built to as part of my education to demonstrate my {{architectural skills}} and {{API design}}. The project showcases my ability to create {{well-structured}} and {{maintainable}} systems with clean separation of concerns. <br><br> The backend is structured using a {{modular architecture}} with controllers, services, and models cleanly separated for each domain entity. I implemented comprehensive {{RESTful API}} endpoints for books, collections, users, and reviews with proper error handling and data validation. The {{MongoDB}} integration uses schemas and relationships to maintain data integrity across the application.",
+        "The frontend is built with {{React}} and {{TypeScript}}, featuring a {{mobile-first}} design with smooth animations and intuitive interactions. I implemented {{advanced state management}} through React Router 7's loaders and actions pattern, allowing for {{server-side}} data handling with {{optimistic UI updates}}. The book collection system enables users to create personal libraries, add/remove books, and organize their reading experience with minimal latency through efficient {{API interactions}}."
+      ],
+      "tech": ["React Router 7", "TypeScript", "Express.js", "MongoDB", "Tailwind CSS", "RESTful API"]
+    },
+    {
+      "type": "projects",
       "name": "RESBOOK",
       "title": "RESBOOK",
       "date": "Dec 2024",
@@ -64,64 +122,6 @@
         ""
       ],
       "tech": ["Node.js", "Cron", "API", "Discord.js", "Raspberry Pi"]
-    },
-    {
-      "type": "projects",
-      "name": "karlg.dk",
-      "title": "karlg.dk",
-      "date": "Feb 2025",
-      "links": [
-        {
-          "title": "GitHub",
-          "url": "https://github.com/karl0905/portfolio"
-        }
-      ],
-      "images": [
-        {
-          "src": "/portfolio/landing_page.png",
-          "alt": "Landing page of the Portfolio"
-        },
-        {
-          "src": "/portfolio/colorize_string.png",
-          "alt": "Colorize function of the Portfolio"
-        }
-      ],
-      "content": [
-        "This {{portfolio}} you're currently exploring is a personal project that I developed to showcase my {{skills}} and {{interests}} in development, particularly my growing interest in {{backend technologies}}. <br> <br> I've built this portfolio to reflect how I {{actually work}} - in the {{terminal}}, with tools like Neovim and Tmux. It's not just about {{pretty interfaces}}; I enjoy diving into system {{architecture}} and {{structure}}. Working in the terminal gives me a deeper understanding of how things are {{connected}} under the surface.",
-        "The content is stored in a {{JSON}} file for easy maintenance, then fetched and ran through a {{Colorize function}} to add one of three colors to the highlightet words. {{Just}} {{like}} {{this}}."
-      ],
-      "tech": ["Next.js", "Tailwind", "Node.js", "CSS"]
-    },
-    {
-      "type": "projects",
-      "name": "BookSpace",
-      "title": "BookSpace",
-      "date": "Mar 2025",
-      "links": [
-        {
-          "title": "GitHub",
-          "url": "https://github.com/karl0905/bookspace"
-        },
-        {
-          "title": "Live",
-          "url": "https://bookspace.karlg.dk"
-        }
-      ],
-      "images": [
-        {
-          "src": "/bookspace/bookspace_book.png",
-          "alt": "Book page of the book app"
-        },
-        {
-          "src": "/bookspace/bookspace_homepage.png",
-          "alt": "Homepage of the book app"
-        }
-      ],
-      "content": [
-        "BookSpace is a {{full-stack}} book management application I built to as part of my education to demonstrate my {{architectural skills}} and {{API design}}. The project showcases my ability to create {{well-structured}} and {{maintainable}} systems with clean separation of concerns. <br><br> The backend is structured using a {{modular architecture}} with controllers, services, and models cleanly separated for each domain entity. I implemented comprehensive {{RESTful API}} endpoints for books, collections, users, and reviews with proper error handling and data validation. The {{MongoDB}} integration uses schemas and relationships to maintain data integrity across the application.",
-        "The frontend is built with {{React}} and {{TypeScript}}, featuring a {{mobile-first}} design with smooth animations and intuitive interactions. I implemented {{advanced state management}} through React Router 7's loaders and actions pattern, allowing for {{server-side}} data handling with {{optimistic UI updates}}. The book collection system enables users to create personal libraries, add/remove books, and organize their reading experience with minimal latency through efficient {{API interactions}}."
-      ],
-      "tech": ["React Router 7", "TypeScript", "Express.js", "MongoDB", "Tailwind CSS", "RESTful API"]
     }
   ]
 }
