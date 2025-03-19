@@ -35,13 +35,7 @@
         "The development was managed with {{GitHub Projects}}, taking advantage of {{feature branches}} and {{pull requests}} to ensure a smooth development process.",
         "The frontends are deployed on {{Vercel}} and the backend is deployed on a {{PHP server}}."
       ],
-      "tech": [
-        "Next.js",
-        "Remix",
-        "MySQL",
-        "PHP",
-        "Vercel"
-      ]
+      "tech": ["Next.js", "Remix", "MySQL", "PHP", "Vercel"]
     },
     {
       "type": "projects",
@@ -69,13 +63,7 @@
         "The bot is built with {{Node.js}} and uses the {{Riot API}} to get the game data. As mentioned, the bot is using {{Cron}} to check for new games every 5 minutes.",
         ""
       ],
-      "tech": [
-        "Node.js",
-        "Cron",
-        "API",
-        "Discord.js",
-        "Raspberry Pi"
-      ]
+      "tech": ["Node.js", "Cron", "API", "Discord.js", "Raspberry Pi"]
     },
     {
       "type": "projects",
@@ -102,12 +90,38 @@
         "This {{portfolio}} you're currently exploring is a personal project that I developed to showcase my {{skills}} and {{interests}} in development, particularly my growing interest in {{backend technologies}}. <br> <br> I've built this portfolio to reflect how I {{actually work}} - in the {{terminal}}, with tools like Neovim and Tmux. It's not just about {{pretty interfaces}}; I enjoy diving into system {{architecture}} and {{structure}}. Working in the terminal gives me a deeper understanding of how things are {{connected}} under the surface.",
         "The content is stored in a {{JSON}} file for easy maintenance, then fetched and ran through a {{Colorize function}} to add one of three colors to the highlightet words. {{Just}} {{like}} {{this}}."
       ],
-      "tech": [
-        "Next.js",
-        "Tailwind",
-        "Node.js",
-        "CSS"
-      ]
+      "tech": ["Next.js", "Tailwind", "Node.js", "CSS"]
+    },
+    {
+      "type": "projects",
+      "name": "BookSpace",
+      "title": "BookSpace",
+      "date": "Mar 2025",
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/karl0905/bookspace"
+        },
+        {
+          "title": "Live",
+          "url": "https://bookspace.karlg.dk"
+        }
+      ],
+      "images": [
+        {
+          "src": "/bookspace/bookspace_book.png",
+          "alt": "Book page of the book app"
+        },
+        {
+          "src": "/bookspace/bookspace_homepage.png",
+          "alt": "Homepage of the book app"
+        }
+      ],
+      "content": [
+        "BookSpace is a {{full-stack}} book management application I built to as part of my education to demonstrate my {{architectural skills}} and {{API design}}. The project showcases my ability to create {{well-structured}} and {{maintainable}} systems with clean separation of concerns. <br><br> The backend is structured using a {{modular architecture}} with controllers, services, and models cleanly separated for each domain entity. I implemented comprehensive {{RESTful API}} endpoints for books, collections, users, and reviews with proper error handling and data validation. The {{MongoDB}} integration uses schemas and relationships to maintain data integrity across the application.",
+        "The frontend is built with {{React}} and {{TypeScript}}, featuring a {{mobile-first}} design with smooth animations and intuitive interactions. I implemented {{advanced state management}} through React Router 7's loaders and actions pattern, allowing for {{server-side}} data handling with {{optimistic UI updates}}. The book collection system enables users to create personal libraries, add/remove books, and organize their reading experience with minimal latency through efficient {{API interactions}}."
+      ],
+      "tech": ["React Router 7", "TypeScript", "Express.js", "MongoDB", "Tailwind CSS", "RESTful API"]
     }
   ]
 }
