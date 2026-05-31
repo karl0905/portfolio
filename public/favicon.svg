@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243 271">
+  <style>
+    .tilde {
+      stroke: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .tilde {
+        stroke: #fff;
+      }
+    }
+  </style>
+  <path
+    class="tilde"
+    d="M22 156C60 82 102 82 128 142C154 202 196 202 234 128"
+    fill="none"
+    stroke-linecap="round"
+    stroke-width="44"
+  />
+</svg>
